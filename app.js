@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-
 var morgan = require('morgan');
 var mongoose = require('mongoose');
 var cors = require('cors');
@@ -13,6 +12,7 @@ var routes = require('./config/routes');
 
 var databaseUri = require('./config/db')(environment);
 
+mongoose.Promise = bluebird;
 mongoose.connect(databaseUri);
 
 
@@ -25,6 +25,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use('/api', routes);
 
 app.listen(port, function(){
   console.log("express is working on " + port);
