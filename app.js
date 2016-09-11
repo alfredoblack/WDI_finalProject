@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 var port = process.env.PORT || 8000;
 var environment = app.get('env');
 
+var routes = require('./config/routes');
+
 var databaseUri = require('./config/db')(environment);
 
 mongoose.connect(databaseUri);
