@@ -19,7 +19,7 @@ var databaseUri = require('./config/db')(environment);
 
 mongoose.Promise = bluebird;
 mongoose.connect(databaseUri);
-// mongoose.connect("mongodb://localhost/oauth-example");
+// mongoose.connect("mongodb://localhost/kit-dodgeball-app");
 
 
 if('test' !== environment) {

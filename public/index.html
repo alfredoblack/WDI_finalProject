@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.min.js"></script>
   <script src="//npmcdn.com/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="//cdn.jsdelivr.net/satellizer/0.13.1/satellizer.min.js"></script>
+
+  <!-- INTERNAL DIRECTORIES -->
   <script src="/js/client.js"></script>
  
 
@@ -17,9 +19,12 @@
 
 </head>
 <body ng-controller="MainController as main">
+
   <h1>Dodgeball KIT</h1>
-  <button ng-click="main.authenticate('github')">Signin with GitHUB</button>
-  <button ng-click="main.authenticate('twitter')">Signin with Twitter</button>
+
+  <button ng-click="main.authenticate('github')">Sign in with GitHUB</button>
+  <button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>
+
   <main ui-view></main>
 
 </body>
