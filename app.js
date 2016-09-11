@@ -8,7 +8,7 @@ var bluebird = require('bluebird');
 var jwt = require('jsonwebtoken');
 
 var request = require('request-promise');
-// var qs = require('qs');
+var qs = require('qs');
 
 var port = process.env.PORT || 3000;
 var environment = app.get('env');
