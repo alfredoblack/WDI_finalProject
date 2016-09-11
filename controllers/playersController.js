@@ -71,9 +71,9 @@ function playerDelete(req, res) {
 
 
 module.exports = {
-  index: playersIndex,
-  create: playersCreate,
+  index: playerIndex,
   show: playerShow,
+  create: playerCreate,
   update: playerUpdate,
   delete: playerDelete
 }
