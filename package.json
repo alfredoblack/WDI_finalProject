@@ -26,6 +26,7 @@
     "mongoose": "^4.6.0",
     "morgan": "^1.7.0",
     "request": "^2.74.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "satellizer": "^0.15.5"
   }
 }

@@ -27,5 +27,4 @@ router.route('/teams/:id')
 
 router.post('/oauth/github', oauthController.github);
 
-
 module.exports = router;

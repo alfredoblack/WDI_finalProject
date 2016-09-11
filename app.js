@@ -5,8 +5,12 @@ var mongoose = require('mongoose');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var bluebird = require('bluebird');
+var jwt = require('jsonwebtoken');
 
-var port = process.env.PORT || 8000;
+var request = require('request-promise');
+// var qs = require('qs');
+
+var port = process.env.PORT || 3000;
 var environment = app.get('env');
 
 var routes = require('./config/routes');
@@ -15,6 +19,7 @@ var databaseUri = require('./config/db')(environment);
 
 mongoose.Promise = bluebird;
 mongoose.connect(databaseUri);
+// mongoose.connect("mongodb://localhost/oauth-example");
 
 
 if('test' !== environment) {
@@ -25,6 +30,8 @@ app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.static('public'));
 
 app.use('/api', routes);
 

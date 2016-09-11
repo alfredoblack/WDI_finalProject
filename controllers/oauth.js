@@ -10,16 +10,16 @@ function github(req, res) {
     qs: {
       client_id: process.env.GITHUB_API_KEY,
       client_secret: process.env.GITHUB_API_SECRET,
-      code: req.body.code,
+      code: req.body.code
     },
     json: true
   })
-  .then(function(response){
+  .then(function(response) {
     return request.get({
       url: "https://api.github.com/user",
       qs: { access_token: response.access_token },
-      headers: { 'User-Agent': 'Request-Promise' }
-    });
+      headers: { "User-Agent": "Request-Promise" }
+    })
   })
   .then(function(profile) {
     return User.findOne({ email: profile.email })
@@ -27,31 +27,33 @@ function github(req, res) {
         if(user) {
           user.githubId = profile.id;
           user.avatar = profile.avatar_url;
-        }
-        else {
-          // if not, create a new user
+        } else {
           user = new User({
             username: profile.login,
             email: profile.email,
             githubId: profile.id,
-            avatar: profile.avatar_url
+            avatar:profile.avatar_url
           });
         }
+
         return user.save();
       })
   })
   .then(function(user) {
     var payload = {
       _id: user._id,
-      avatar: user.avatar,
+      avarat: user.avatar,
       username: user.username
-    };
+    }
 
-    var token = jwt.sign(payload, secret, { expiresIn: '24h' });
+    var token = jwt.sign(payload, secret, { expiresIn: "24h" });
 
     res.status(200).json({ token: token });
-  });
 
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 }
 
 module.exports = {
