@@ -1,45 +1,78 @@
 var Player = require('../models/player');
 
-//CREATE A PLAYER
-
-function playersCreate(req, res){
-  Player.create(req.body.player, function(err, player){
-    if(err) return res.status(500).json(err);
-  });
-}
-
-function playersIndex(req, res){
-  Player.find(function(err, player){
-    if(err) return res.status(500).json(err);
-    return res.status(200).json(player);
-  });
+function playerIndex(req, res) {
+  Player.find()
+    .populate('team')
+    .then(function(players) {
+      res.status(200).json(players)
+    })
+    .catch(function(err) {
+      console.log(err);
+      res.status(500).json(err);
+    });
 }
 
 function playerShow(req, res) {
-  Player.findById(req.params.id, function(err, player) {
-    if(err) return res.status(500).json(err);
-    if(!player) return res.status(404).json({ message: "Could not find a player with that id" });
-    return res.status(200).json(player);
-  });
+  Player.findById(req.params.id)
+    .populate('team')
+    .then(function(player) {
+      res.status(200).json(player);
+    })
+    .catch(function(err) {
+      res.status(500).json(err);
+    });
+}
+
+function playerCreate(req, res) {
+  Player.create(req.body)
+    .then(function(player) {
+      return Player.findById(player._id)
+        .populate('team');
+    })
+    .then(function(player) {
+      res.status(201).json(player);
+    })
+    .catch(function(err) {
+      res.status(500).json(err);
+    });
 }
 
 function playerUpdate(req, res) {
-  Player.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true }, function(err, player) {
-    if(err) return res.status(400).json(err);
-    return res.status(200).json(player);
-  });
+  Player.findById(req.params.id)
+    .then(function(player) {
+      for(key in req.body) player[key] = req.body[key];
+      return player.save();
+    })
+    .then(function(player) {
+      return Player.findById(player._id)
+        .populate('team');
+    })
+    .then(function(player) {
+      res.status(200).json(player);
+    })
+    .catch(function(err) {
+      console.log(err);
+      res.status(500).json(err);
+    });
 }
 
 function playerDelete(req, res) {
-  Player.findByIdAndRemove(req.params.id, function(err) {
-    if(err) return res.status(500).json(err);
-    return res.status(204).send();
-  });
+  Player.findById(req.params.id)
+    .then(function(player) {
+      return player.remove();
+    })
+    .then(function() {
+      res.status(204).end();
+    })
+    .catch(function(err) {
+      res.status(500).json(err);
+    });
 }
 
+
 module.exports = {
-  create: playersCreate,
   index: playersIndex,
+  create: playersCreate,
   show: playerShow,
   update: playerUpdate,
   delete: playerDelete
