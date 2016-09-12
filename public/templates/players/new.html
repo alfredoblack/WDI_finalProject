@@ -1,0 +1,36 @@
+<h1>players new</h1>
+
+<form ng-submit="playersNew.create()">
+
+  <div class="form-group">
+    <label for="formGroupExampleInput">Name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" ng-model="playersNew.new.name" placeholder="Full Name">
+  </div>
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Image</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.image"placeholder="your best portrait">
+  </div>
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Spiritual Animal</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.spiritualanimal" placeholder="what you become">
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="formGroupExampleInput2">Team</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.team.name" placeholder="Your Team name">
+  </div> -->
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Github</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.github" placeholder="Github ">
+  </div>
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Twitter</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.twitter" placeholder="Twitter">
+  </div>
+
+  <button>save</button>
+</form>

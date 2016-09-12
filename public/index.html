@@ -21,17 +21,39 @@
  
 
   <!-- CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+ 
 
 
 </head>
-<body ng-controller="MainController as main">
+<body>
+  <nav class="navbar navbar-light bg-faded">
+    <a class="navbar-brand" href="#">Dodgeball K.I.T</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" ui-sref="playersIndex">Players</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" ui-sref="teamsIndex">Teams</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Games</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-xs-right">
+      <input class="form-control" type="text" placeholder="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </nav>
 
-  <h1>Dodgeball KIT</h1>
-
-  <button ng-click="main.authenticate('github')">Sign in with GitHUB</button>
-  <button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>
-
+ 
   <main ui-view></main>
 
 </body>

@@ -6,7 +6,7 @@ var playerSchema = new mongoose.Schema({
   spiritualanimal: { type: String, unique: true },
   github: { type: String, required: true, unique: true },
   twitter: { type: String, required: true, unique: true },
-  team: { type: mongoose.Schema.ObjectId, ref: 'Team' },
+  team: { type: mongoose.Schema.ObjectId, ref: 'Team' }
  
 });
 

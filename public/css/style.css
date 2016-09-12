@@ -1,3 +1,8 @@
 body {
   background-color: lightgreen;
 }
+
+.player-picture {
+  height: 200px;
+  width: auto;
+}

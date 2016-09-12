@@ -1,4 +1,7 @@
+<h1>players index</h1>
 <ul>
   <li ng-repeat="player in playersIndex.all" ui-sref="playersShow({ id: player._id })">{{ player.name }}
- <img ng-src="{{player.image }}"></li>
+ </li>
 </ul>
+
+<button ui-sref="playersNew">Add</button>

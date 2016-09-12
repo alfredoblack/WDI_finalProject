@@ -11,17 +11,17 @@ Player.collection.drop();
 
 Team.create([{
   name: "the black panthers",
-  image:"www.fillmurray.com/200/600"
+  image:"http://www.fillmurray.com/200/600"
 
 },{
   name: "the pink panthers",
-  image: "www.fillmurray.com/500/600"
+  image: "http://www.fillmurray.com/500/600"
 }], function(err,teams){
   if(!err)console.log("Teams created!");
 
 Player.create([{
   name: "Adri Black",
-  image: "www.fillmurray.com/200/200",
+  image: "http://www.fillmurray.com/200/200",
   spiritualanimal: "jesus lizard",
   team: teams[0],
   github:"https://github.com/alfredoblack",
@@ -29,12 +29,21 @@ Player.create([{
 
 },{
   name: "Toni",
-  image: "www.fillmurray.com/300/300",
+  image: "http://www.fillmurray.com/300/300",
   spiritualanimal: "cat",
   team: teams[1],
   github:"https://github.com/tnyrossi",
   twitter:"https://twitter.com/tonio155"
-}], function(err, players){
+},
+{
+  name: "Chanse Campbell",
+  image: "./assets/chanse.jpg",
+  spiritualanimal: "Pug",
+  team: teams[1],
+  github:"https://github.com/tnyrossi",
+  twitter:"https://twitter.com/tonio155"
+}
+], function(err, players){
   if(!err) console.log("Players created");
   mongoose.connection.close();
   });
