@@ -46,6 +46,26 @@ function Router($stateProvider, $urlRouterProvider) {
       url: "/players/:id/edit",
       templateUrl: "/templates/players/edit.html",
       controller: "PlayersEditController as playersEdit"
+    })
+    .state("teamsIndex", {
+      url: "/teams",
+      templateUrl: "/templates/teams/index.html",
+      controller: "TeamIndexController as teamsIndex"
+    })
+    .state("teamsNew", {
+      url: "/teams/new",
+      templateUrl: "/templates/teams/new.html",
+      controller: "TeamNewController as teamsNew"
+    })
+    .state("teamsShow", {
+      url: "/teams/:id",
+      templateUrl: "/templates/teams/show.html",
+      controller: "TeamShowController as teamsShow"
+    })
+    .state("teamsEdit", {
+      url: "/teams/:id/edit",
+      templateUrl: "/templates/teams/edit.html",
+      controller: "TeamEditController as teamsEdit"
     });
 
   $urlRouterProvider.otherwise('/main');

@@ -1,0 +1,7 @@
+<h1>teams index</h1>
+<ul>
+  <li ng-repeat="team in teamsIndex.all" ui-sref="teamsShow({ id: team._id })">{{ team.name }}
+ </li>
+</ul>
+
+<button ui-sref="teamsNew">Add</button>
