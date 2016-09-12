@@ -1,0 +1,10 @@
+<h1>Teams Show</h1>
+
+<h1>{{teamsShow.selected.name}}</h1>
+
+<img ng-src="{{teamsShow.selected.image }}">
+
+<h3>{{teamsShow.selected.team.name }}</h3>
+
+<button ui-sref="teamsEdit({ id: teamsShow.selected._id })">Edit</button>
+<button ng-click="teamsShow.delete()">Delete</button>
