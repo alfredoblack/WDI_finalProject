@@ -11,7 +11,7 @@ Player.collection.drop();
 
 Team.create([{
   name: "the black panthers",
-  image: "www.fillmurray.com/200/600"
+  image:"www.fillmurray.com/200/600"
 
 },{
   name: "the pink panthers",

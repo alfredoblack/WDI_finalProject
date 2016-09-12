@@ -4,5 +4,5 @@ angular
 
 PlayersShowController.$inject = ['Player', '$state'];
 function PlayersShowController(Player, $state){
-  this.selected = Film.get($state.params);
+  this.selected = Player.get($state.params);
 }
