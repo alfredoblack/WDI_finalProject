@@ -50,22 +50,22 @@ function Router($stateProvider, $urlRouterProvider) {
     .state("teamsIndex", {
       url: "/teams",
       templateUrl: "/templates/teams/index.html",
-      controller: "TeamIndexController as teamsIndex"
+      controller: "TeamsIndexController as teamsIndex"
     })
     .state("teamsNew", {
       url: "/teams/new",
       templateUrl: "/templates/teams/new.html",
-      controller: "TeamNewController as teamsNew"
+      controller: "TeamsNewController as teamsNew"
     })
     .state("teamsShow", {
       url: "/teams/:id",
       templateUrl: "/templates/teams/show.html",
-      controller: "TeamShowController as teamsShow"
+      controller: "TeamsShowController as teamsShow"
     })
     .state("teamsEdit", {
       url: "/teams/:id/edit",
       templateUrl: "/templates/teams/edit.html",
-      controller: "TeamEditController as teamsEdit"
+      controller: "TeamsEditController as teamsEdit"
     });
 
   $urlRouterProvider.otherwise('/main');
