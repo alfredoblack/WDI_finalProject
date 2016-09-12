@@ -11,6 +11,13 @@
 
   <!-- INTERNAL DIRECTORIES -->
   <script src="/js/client.js"></script>
+  <script src="/js/controllers/main.js"></script>
+  <script src="/js/controllers/players/index.js"></script>
+  <script src="/js/controllers/players/show.js"></script>
+  <script src="/js/controllers/players/edit.js"></script>
+  <script src="/js/controllers/players/new.js"></script>
+  <script src="/js/models/team.js"></script>
+  <script src="/js/models/player.js"></script>
  
 
   <!-- CSS -->
@@ -21,8 +28,6 @@
 <body ng-controller="MainController as main">
 
   <h1>Dodgeball KIT</h1>
-
-
 
   <button ng-click="main.authenticate('github')">Sign in with GitHUB</button>
   <button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>

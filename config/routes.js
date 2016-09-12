@@ -26,6 +26,6 @@ router.route('/teams/:id')
   .delete(teamsController.delete);
 
 router.post('/oauth/github', oauthController.github);
-// router.post('/auth/twitter', oauthController.twitter);
+router.post('/oauth/twitter', oauthController.twitter);
 
 module.exports = router;

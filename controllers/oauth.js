@@ -2,6 +2,7 @@ var User = require('../models/user');
 var request = require('request-promise');
 var jwt = require('jsonwebtoken');
 var secret = require('../config/tokens').secret;
+var qs = require('qs');
 
 function github(req, res) {
 
