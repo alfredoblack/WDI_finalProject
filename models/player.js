@@ -9,8 +9,10 @@ var playerSchema = new mongoose.Schema({
   // team: { type: mongoose.Schema.ObjectId, ref: 'Team' }
    username: String,
    email: String,
-   githubId: Number,
+   githubId: String,
+   twitterId: String,
    avatar: String
+   // team: { type: mongoose.Schema.ObjectId, ref: 'Team' }
 });
 
 module.exports = mongoose.model('Player', playerSchema);

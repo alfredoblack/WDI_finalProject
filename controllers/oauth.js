@@ -1,4 +1,4 @@
-var User = require('../models/user');
+var Player = require('../models/player');
 var request = require('request-promise');
 var jwt = require('jsonwebtoken');
 var secret = require('../config/tokens').secret;
@@ -24,28 +24,28 @@ function github(req, res) {
     })
   })
   .then(function(profile) {
-    return User.findOne({ email: profile.email })
-      .then(function(user) {
-        if(user) {
-          user.githubId = profile.id;
-          user.avatar = profile.avatar_url;
+    return Player.findOne({ email: profile.email })
+      .then(function(player) {
+        if(player) {
+          player.githubId = profile.id;
+          player.avatar = profile.avatar_url;
         } else {
-          user = new User({
+          player = new Player({
             username: profile.login,
             email: profile.email,
             githubId: profile.id,
             avatar: profile.avatar_url
           });
         }
-        console.log("User saving.. ", user);
-        return user.save();
+        console.log("Player saving.. ", player);
+        return player.save();
       })
   })
-  .then(function(user) {
+  .then(function(player) {
     var payload = {
-      _id: user._id,
-      avatar: user.avatar,
-      username: user.username
+      _id: player._id,
+      username: player.username,
+      avatar: player.avatar
     }
 
     var token = jwt.sign(payload, secret, { expiresIn: "24h" });
@@ -103,28 +103,28 @@ function twitter(req, res) {
       });
     })
     .then(function(profile) {
-      return User.findOne({ twitterId: profile.id })
-        .then(function(user) {
-          if(user) {
-            user.twitterId = profile.id;
-            user.avatar = profile.profile_image_url;
+      return Player.findOne({ twitterId: profile.id })
+        .then(function(player) {
+          if(player) {
+            player.twitterId = profile.id;
+            player.avatar = profile.profile_image_url;
           }
           else {
-            user = new User({
+            player = new Player({
               username: profile.name,
               twitterId: profile.id,
               avatar: profile.profile_image_url
             });
           }
 
-          return user.save();
+          return player.save();
         });
     })
-    .then(function(user) {
+    .then(function(player) {
       var payload = {
-        _id: user._id,
-        username: user.username,
-        avatar: user.avatar
+        _id: player._id,
+        username: player.username,
+        avatar: player.avatar
       };
 
       var token = jwt.sign(payload, secret, { expiresIn: '24h' });

@@ -1,11 +1,11 @@
 <h1>players show</h1>
-<h1>{{playersShow.selected.name}}</h1>
-<h1>{{ playersShow.selected.spiritualanimal }}</h1>
+<h1>{{playersShow.selected}}</h1>
+<!-- <h1>{{ playersShow.selected.spiritualanimal }}</h1>
+ -->
+<img ng-src="{{playersShow.selected.avatar }}" class="player-picture">
 
-<img ng-src="{{playersShow.selected.image }}" class="player-picture">
-
-<h3>{{playersShow.selected.team.name }}</h3>
-
+<!-- <h3>{{playersShow.selected.team.name }}</h3>
+ -->
 <button ui-sref="playersEdit({ id: playersShow.selected._id })">Edit</button>
 <button ng-click="playersShow.delete()">Delete</button>
 

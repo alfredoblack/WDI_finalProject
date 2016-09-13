@@ -7,12 +7,14 @@
 <h3>{{teamsShow.selected.team.name }}</h3>
 
 <h4>Team Roster</h4>
-
-{{ teamsShow.selected.player }}
+<li ng-repeat="player in teamsShow.selected.players">
+  {{ player.username }}
+</li>
 <!-- <ul>
    <li ng-repeat="teamsShow.teams">{{ team.player }}
   </li>
 </ul> -->
 
+<button ng-click="teamsShow.join()">Join</button>
 <button ui-sref="teamsEdit({ id: teamsShow.selected._id })">Edit</button>
 <button ng-click="teamsShow.delete()">Delete</button>

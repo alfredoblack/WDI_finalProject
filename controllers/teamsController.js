@@ -2,7 +2,7 @@ var Team = require('../models/team');
 
 function teamIndex(req, res) {
   Team.find()
-    .populate('player')
+    .populate('players')
     .then(function(teams) {
       res.status(200).json(teams)
     })
@@ -13,7 +13,7 @@ function teamIndex(req, res) {
 
 function teamShow(req, res) {
   Team.findById(req.params.id)
-    .populate('player')
+    .populate('players')
     .then(function(team) {
       res.status(200).json(team);
     })
