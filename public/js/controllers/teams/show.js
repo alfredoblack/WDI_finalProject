@@ -5,6 +5,7 @@ angular
 TeamsShowController.$inject = ['Team', '$state'];
 function TeamsShowController(Team, $state){
   this.selected = Team.get($state.params);
+  this.teams = Team.query();
 
   console.log(this.selected);
   

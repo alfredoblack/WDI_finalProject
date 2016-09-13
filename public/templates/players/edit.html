@@ -23,6 +23,14 @@
   </div> -->
 
   <div class="form-group">
+    <label for="formGroupExampleInput2">Team</label>
+    <select name="team" ng-model="playersEdit.selected.team">
+      <option disabled selected value="">Please select</option>
+      <option ng-repeat="team in playersEdit.teams" ng-value="team._id" ng-selected="team._id === playersEdit.selected.team._id">{{team.name}}</option>
+    </select>
+  </div>  
+
+  <div class="form-group">
     <label for="formGroupExampleInput2">Github</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.github" placeholder="Github ">
   </div>

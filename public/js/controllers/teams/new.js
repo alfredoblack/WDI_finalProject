@@ -2,11 +2,11 @@ angular
   .module('DodgeKitApp')
   .controller('TeamsNewController', TeamsNewController);
 
-TeamsNewController.$inject = ['Team','$state'];
-function TeamsNewController(Team, $state){
+TeamsNewController.$inject = ['Team','$state', 'Player'];
+function TeamsNewController(Team, $state, Player){
   var self = this
   this.new = {};
-  this.teams = Team.query();
+  this.players = Player.query();
 
   this.create = function(){
     console.log("Creating")

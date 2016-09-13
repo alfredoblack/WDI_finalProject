@@ -2,10 +2,10 @@ angular
   .module('DodgeKitApp')
   .controller("TeamsEditController", TeamsEditController);
 
-TeamsEditController.$inject = ["$state", "Team"];
-function TeamsEditController($state, Team) {
+TeamsEditController.$inject = ["$state", "Team", "Player"];
+function TeamsEditController($state, Team, Player) {
   this.selected = Team.get($state.params);
-  
+  this.players = Player.query();
 
 console.log(this.selected)
   this.save = function() {
@@ -14,3 +14,4 @@ console.log(this.selected)
     });
   }
 }
+

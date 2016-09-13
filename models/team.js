@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 var teamSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  image: { type: String }
+  image: { type: String },
+  player: {type: mongoose.Schema.ObjectId, ref: 'Player' }
  
 });
 

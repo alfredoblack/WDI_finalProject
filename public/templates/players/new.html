@@ -16,11 +16,18 @@
     <label for="formGroupExampleInput2">Spiritual Animal</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.spiritualanimal" placeholder="what you become">
   </div>
-
-  <!-- <div class="form-group">
+<!-- 
+  <div class="form-group">
     <label for="formGroupExampleInput2">Team</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.team.name" placeholder="Your Team name">
   </div> -->
+<div class="form-group">
+<label for="formGroupExampleInput2">Team</label>
+  <select name="team" ng-model="playersNew.new.team">
+    <option disabled selected value="">Please select</option>
+    <option ng-repeat="team in playersNew.teams" ng-value="team._id">{{team.name}}</option>
+  </select>
+</div>
 
   <div class="form-group">
     <label for="formGroupExampleInput2">Github</label>
