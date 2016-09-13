@@ -19,7 +19,8 @@ function github(req, res) {
     return request.get({
       url: "https://api.github.com/user",
       qs: { access_token: response.access_token },
-      headers: { "User-Agent": "Request-Promise" }
+      headers: { "User-Agent": "Request-Promise" },
+      json: true
     })
   })
   .then(function(profile) {
@@ -33,17 +34,17 @@ function github(req, res) {
             username: profile.login,
             email: profile.email,
             githubId: profile.id,
-            avatar:profile.avatar_url
+            avatar: profile.avatar_url
           });
         }
-
+        console.log("User saving.. ", user);
         return user.save();
       })
   })
   .then(function(user) {
     var payload = {
       _id: user._id,
-      avarat: user.avatar,
+      avatar: user.avatar,
       username: user.username
     }
 
