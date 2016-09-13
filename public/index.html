@@ -12,6 +12,8 @@
   <!-- INTERNAL DIRECTORIES -->
   <script src="/js/client.js"></script>
   <script src="/js/controllers/main.js"></script>
+  <script src="/js/controllers/authentications/login.js"></script>
+  <script src="/js/controllers/authentications/register.js"></script>
   <script src="/js/controllers/players/index.js"></script>
   <script src="/js/controllers/players/show.js"></script>
   <script src="/js/controllers/players/edit.js"></script>
@@ -28,10 +30,10 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
  
-
+  
 
 </head>
-  <body>
+  <body ng-controller="MainController as main">
     <nav class="navbar navbar-light bg-faded">
       <a class="navbar-brand" href="#">Dodgeball K.I.T</a>
       <ul class="nav navbar-nav">
@@ -39,16 +41,25 @@
           <a class="nav-link" >Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" ui-sref="playersIndex">Players</a>
+          <a class="nav-link" href="#" ui-sref="playersIndex" ng-if="main.currentUser">Players</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" ui-sref="teamsIndex">Teams</a>
+          <a class="nav-link" href="#" ui-sref="teamsIndex" ng-if="main.currentUser">Teams</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Games</a>
+          <a class="nav-link" href="#" ng-if="main.currentUser">Games</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ui-sref="login" ng-if="!main.currentUser">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ui-sref="register" ng-if="!main.currentUser">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ui-sref="main" ng-if="main.currentUser" ng-click="main.logout()">Logout</a>
         </li>
       </ul>
       <form class="form-inline pull-xs-right">

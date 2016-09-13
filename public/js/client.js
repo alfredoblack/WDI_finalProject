@@ -1,5 +1,6 @@
 angular
   .module('DodgeKitApp', ['ngResource', 'ui.router', 'satellizer'])
+  .constant("API_URL", "http://localhost:3000/api")
   .config(oAuthConfig)
   .config(Router);
  
@@ -24,8 +25,7 @@ function Router($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('main', {
       url: '/main',
-      templateUrl: '/templates/main.html',
-      controller: "MainController as main"
+      templateUrl: '/templates/main.html'
     })
     .state("playersIndex", {
       url: "/players",
@@ -66,7 +66,18 @@ function Router($stateProvider, $urlRouterProvider) {
       url: "/teams/:id/edit",
       templateUrl: "/templates/teams/edit.html",
       controller: "TeamsEditController as teamsEdit"
-    });
+    })
+    .state("login", {
+      url: "/login",
+      templateUrl: "/templates/authentications/login.html",
+      controller: "LoginController as login"
+    })
+    .state("register", {
+      url: "/register",
+      templateUrl: "/templates/authentications/register.html",
+      controller: "RegisterController as register"
+    })
+
 
   $urlRouterProvider.otherwise('/main');
 

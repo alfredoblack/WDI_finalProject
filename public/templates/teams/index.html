@@ -1,7 +1,33 @@
 <h1>teams index</h1>
-<ul>
-  <li ng-repeat="team in teamsIndex.all" ui-sref="teamsShow({ id: team._id })">{{ team.name }}
+<!-- <ul>
+  <li ng-repeat="team in teamsIndex.all" >{{ team.name }}
  </li>
-</ul>
+</ul> -->
+
+
+<table class="table">
+  <thead class="thead-inverse">
+      <tr>
+        <th>Team</th>
+        <th>Team Name</th>
+        <th>Hits</th>
+        <th>Catches</th>
+        <th>Games Won</th>
+        <th>Total Games Played</th>
+        <th>GD</th>
+       
+      </tr>
+    </thead>
+  
+    <tr ng-repeat="team in teamsIndex.all">
+      <td><img ng-src="{{ team.image }}" class="team-picture"</td>
+      <td ui-sref="teamsShow({ id: team._id })">{{ team.name }}</td>
+      <td>20</td>
+      <td>15</td>
+    </tr>
+    
+</table>
+
+
 
 <button ui-sref="teamsNew">Add</button>

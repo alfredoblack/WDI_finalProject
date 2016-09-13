@@ -1,0 +1,34 @@
+<h1>Register</h1>
+
+<form ng-submit="register.submit()">
+
+  <div class="form-group">
+    <input type="text" name="name" class="form-control" ng-model="register.player.name" placeholder="Name">
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="username" class="form-control" ng-model="register.player.username" placeholder="Username">
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="avatar" class="form-control" ng-model="register.player.avatar" placeholder="Profile Picture">
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="spiritualanimal" class="form-control" ng-model="register.player.spiritualanimal" placeholder="What's your Spiritual Animal?">
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="email" class="form-control" ng-model="register.player.email" placeholder="Email">
+  </div>
+
+  <div class="form-group">
+    <input type="password" name="password" class="form-control" ng-model="register.player.password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <input type="password" name="passwordConfirmation" class="form-control" ng-model="register.player.passwordConfirmation" placeholder="Password Confirmation">
+  </div>
+
+  <input type="submit" value="Submit" class="btn btn-primary">
+</form>
+ 

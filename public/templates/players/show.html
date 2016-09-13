@@ -4,6 +4,25 @@
  -->
 <img ng-src="{{playersShow.selected.avatar }}" class="player-picture">
 
+<!-- <table class="table">
+  <thead class="thead-inverse">
+      <tr>
+        <th>Player</th>
+        <th>Player Name</th>
+        <th>Hits</th>
+        <th>Catches</th>
+       
+      </tr>
+    </thead>
+        <tr ng-repeat="player in teamsShow.selected.players">
+          <td><img ng-src="{{ player.avatar }}"</td>
+          <td>{{ player.username }}</td>
+          <td>20</td>
+          <td>15</td>
+        </tr>
+        
+    </table> -->
+
 <!-- <h3>{{playersShow.selected.team.name }}</h3>
  -->
 <button ui-sref="playersEdit({ id: playersShow.selected._id })">Edit</button>
