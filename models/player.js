@@ -16,7 +16,16 @@ var playerSchema = new mongoose.Schema({
    twitterId: String,
    twitter: String,
    avatar: String,
-   spiritualanimal: String
+   spiritualanimal: String,
+   dodge: Number,
+   dip: Number,
+   dive: Number,
+   duck: Number,
+   hits: Number,
+   catches: Number,
+   rebounds: Number,
+   speed: Number
+
    // team: { type: mongoose.Schema.ObjectId, ref: 'Team' }
 
 });

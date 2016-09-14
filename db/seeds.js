@@ -11,12 +11,28 @@ Player.collection.drop();
 
 Team.create([{
   name: "WDI-21",
-  image:"http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png"
+  image:"http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png",
+  defence:12,
+  offence:9,
+  gamesWon:15,
+  gamesPlayed:100
 
 },{
   name: "the pink panthers",
-  image: "http://www.fillmurray.com/500/600"
-}], function(err,teams){
+  image: "http://www.fillmurray.com/500/600",
+  defence:12,
+  offence:9,
+  gamesWon:15,
+  gamesPlayed:100
+},{
+  name: "The Purple Cobras",
+  image: "http://www.fillmurray.com/600/600",
+  defence:8,
+  offence:19,
+  gamesWon:11,
+  gamesPlayed:14
+}
+], function(err,teams){
   if(!err)console.log("Teams created!");
 
 Player.create([
@@ -26,8 +42,15 @@ Player.create([
   spiritualanimal: "Cat",
   // team: teams[0],
   github:"https://github.com/alfredoblack",
-  twitter:"https://twitter.com/AdrianaBllack"
-
+  twitter:"https://twitter.com/AdrianaBllack",
+  dodge: 15,
+  dip: 10,
+  dive: 9,
+  duck: 7,
+  hits: 19,
+  catches: 3,
+  rebounds: 18,
+  speed: 20
 },
 {
   username: "Axel",
@@ -35,7 +58,15 @@ Player.create([
   spiritualanimal: "Panda",
   // team: teams[0],
   github:"https://github.com/alfredoblack",
-  twitter:"https://twitter.com/AdrianaBllack"
+  twitter:"https://twitter.com/AdrianaBllack",
+  dodge: 15,
+  dip: 10,
+  dive: 9,
+  duck: 7,
+  hits: 19,
+  catches: 3,
+  rebounds: 18,
+  speed: 20
 
 },
 {
@@ -44,7 +75,15 @@ Player.create([
   spiritualanimal: "Puppy",
   // team: teams[0],
   github:"https://github.com/alfredoblack",
-  twitter:"https://twitter.com/AdrianaBllack"
+  twitter:"https://twitter.com/AdrianaBllack",
+  dodge: 15,
+  dip: 10,
+  dive: 9,
+  duck: 7,
+  hits: 19,
+  catches: 3,
+  rebounds: 18,
+  speed: 20
 
 },
 {
@@ -53,7 +92,15 @@ Player.create([
   spiritualanimal: "Donkey",
   // team: teams[0],
   github:"https://github.com/alfredoblack",
-  twitter:"https://twitter.com/AdrianaBllack"
+  twitter:"https://twitter.com/AdrianaBllack",
+  dodge: 15,
+  dip: 10,
+  dive: 9,
+  duck: 7,
+  hits: 19,
+  catches: 3,
+  rebounds: 18,
+  speed: 20
 
 },
 {
@@ -62,7 +109,15 @@ Player.create([
   spiritualanimal: "Pug",
   // team: teams[1],
   github:"https://github.com/tnyrossi",
-  twitter:"https://twitter.com/tonio155"
+  twitter:"https://twitter.com/tonio155",
+  dodge: 15,
+  dip: 10,
+  dive: 9,
+  duck: 7,
+  hits: 19,
+  catches: 3,
+  rebounds: 18,
+  speed: 20
 },
 {
   username: "Adri",
@@ -70,7 +125,15 @@ Player.create([
   spiritualanimal: "jesus lizard",
   // team: teams[0],
   github:"https://github.com/alfredoblack",
-  twitter:"https://twitter.com/AdrianaBllack"
+  twitter:"https://twitter.com/AdrianaBllack",
+  dodge: 15,
+  dip: 10,
+  dive: 9,
+  duck: 7,
+  hits: 19,
+  catches: 3,
+  rebounds: 18,
+  speed: 20
 
 }
 ], function(err, players){

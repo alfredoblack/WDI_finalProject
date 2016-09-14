@@ -25,3 +25,13 @@ body {
 ul {
   list-style: none;
 }
+
+charts{
+  height: 200px;
+  width: auto;
+}
+
+.charts{
+  height: 200px;
+  width: auto;
+}

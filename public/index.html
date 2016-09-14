@@ -25,6 +25,13 @@
   <script src="/js/controllers/teams/new.js"></script>
   <script src="/js/models/team.js"></script>
   <script src="/js/models/player.js"></script>
+  <!-- <script src="js/directives/charts.js"></script> -->
+
+  <!-- <script src="./wrappers/angularjs/angular-fusioncharts.min.js"></script> -->
+
+
+ <!--  <script src="node_modules/chart.js/Chart.min.js"></script>
+  <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script> -->
  
 
   <!-- CSS -->
@@ -40,7 +47,7 @@
 
       <ul class="nav navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" >Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" ui-sref="main">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" ui-sref="playersIndex" ng-if="main.currentUser">Players</a>

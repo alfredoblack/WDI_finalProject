@@ -4,24 +4,51 @@
  -->
 <img ng-src="{{playersShow.selected.avatar }}" class="player-picture">
 
+<h2>Team:</h2>
+
+<h3>Player's Attribute Stats</h3>
+
+<!-- 
+<div ng-controller="PlayersShowController">
+  <div fusioncharts
+       width="600"
+       height="400"
+       type="column2d"
+       dataSource="" >
+  </div>
+</div> -->
+
+
+
 <table class="table">
   <thead class="thead-inverse">
     <tr>
-      <th>Player</th>
-      <th>Player Name</th>
+      <th>Dodge</th>
+      <th>Dip</th>
+      <th>Dive</th>
+      <th>Duck</th>
       <th>Hits</th>
       <th>Catches</th>
+      <th>Rebounds</th>
+      <th>Speed</th>
      
     </tr>
   </thead>
-    <tr ng-repeat="player in playersShow.selected">
-      <td><img ng-src="{{ player.avatar }}"</td>
-      <td>{{ player.username }}</td>
-      <td>20</td>
-      <td>15</td>
+    <!-- <tr ng-repeat="player in playersShow.selected"> -->
+      <td>{{ playersShow.selected.dodge }}</td>
+      <td>{{ playersShow.selected.dip }}</td>
+      <td>{{ playersShow.selected.dive }}</td>
+      <td>{{ playersShow.selected.duck }}</td>
+      <td>{{ playersShow.selected.hits }}</td>
+      <td>{{ playersShow.selected.catches }}</td>
+      <td>{{ playersShow.selected.rebounds }}</td>
+      <td>{{ playersShow.selected.speed }}</td>
+      <td></td>
     </tr>
         
 </table>
+
+
 
 <!-- <h3>{{playersShow.selected.team.name }}</h3>
  -->
