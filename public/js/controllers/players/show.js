@@ -2,11 +2,51 @@ angular
   .module('DodgeKitApp')
   .controller('PlayersShowController', PlayersShowController);
 
-PlayersShowController.$inject = ['Player', '$state'];
-function PlayersShowController(Player, $state){
-  this.selected = Player.get($state.params);
+PlayersShowController.$inject = ['Player', '$state', 'Team'];
+function PlayersShowController(Player, $state, Team) {
 
-  console.log(this.selected);
+  var self = this;
+
+  Player.get($state.params, function(player) {
+    self.selected = player;
+
+    self.chartData = {
+      chart: {
+        caption: "Player Attributes Chart",
+        subCaption: "Current month",
+        numberPreffix: "$",
+        theme: "fint",
+        radarfillcolor: "#ffffff",
+        showHoverEffect: "true",
+      },
+      categories: [{
+        category: [
+          { label: "Dodge" },
+          { label: "Dip" },
+          { label: "Dive" },
+          { label: "Duck" },
+          { label: "Hits" },
+          { label: "Catches" },
+          { label: "Rebounds" },
+          { label: "Speed" }
+        ]
+      }],
+      dataset:[{
+        seriesname: "Attibutes Scores",
+        data: [
+          { value: self.selected.dodge },
+          { value: self.selected.dip },
+          { value: self.selected.dive },
+          { value: self.selected.duck },
+          { value: self.selected.hits },
+          { value: self.selected.catches },
+          { value: self.selected.rebounds },
+          { value: self.selected.speed },
+        ]
+      }]
+    };
+  });
+
   
   this.delete = function() {
     this.selected.$remove(function() {
@@ -14,129 +54,10 @@ function PlayersShowController(Player, $state){
     });
   }
 
-  this.myDataSource = {
-     chart: {
-         "caption": "Budget Analysis",
-         "subCaption": "Current month",
-         "numberPreffix": "$",
-         "theme": "fint",
-         "radarfillcolor": "#ffffff"
-     },
-
-     "categories": [
-             {
-                 "category": [
-                     {
-                         "label": "Marketing"
-                     },
-                     {
-                         "label": "Product Management"
-                     },
-                     {
-                         "label": "Customer Service"
-                     },
-                     {
-                         "label": "Human Resources"
-                     },
-                     {
-                         "label": "Sales & Distribution"
-                     }
-                 ]
-             }
-         ],
-         "dataset": [
-             {
-                 "seriesname": "Allocated Budget",
-                 "data": [
-                     {
-                         "value": "19000"
-                     },
-                     {
-                         "value": "16500"
-                     },
-                     {
-                         "value": "14300"
-                     },
-                     {
-                         "value": "10000"
-                     },
-                     {
-                         "value": "9800"
-                     }
-                 ]
-             },
-             {
-                 "seriesname": "Actual Cost",
-                 "data": [
-                     {
-                         "value": "6000"
-                     },
-                     {
-                         "value": "9500"
-                     },
-                     {
-                         "value": "11900"
-                     },
-                     {
-                         "value": "8000"
-                     },
-                     {
-                         "value": "9700"
-                     }
-                 ]
-             }
-         ]
-     }
-  //    data:[{
-  //        label: "Bakersfield Central",
-  //        value: "880000"
-  //    },
-  //    {
-  //        label: "Garden Groove harbour",
-  //        value: "730000"
-  //    },
-  //    {
-  //        label: "Los Angeles Topanga",
-  //        value: "590000"
-  //    },
-  //    {
-  //        label: "Compton-Rancho Dom",
-  //        value: "520000"
-  //    },
-  //    {
-  //        label: "Daly City Serramonte",
-  //        value: "330000"
-  //    }]
-  // };
+  this.updateMyChartData = function() {
+    console.log(this.chartData.dataset[0].data);
+    
+  }
 }
 
-
-// app.controller('PlayersShowController', function ($scope) {
-//   $scope.myDataSource = {
-//     chart: {
-//         caption: "Harry's SuperMart",
-//         subCaption: "Top 5 stores in last month by revenue",
-//     },
-//     data:[{
-//         label: "Bakersfield Central",
-//         value: "880000"
-//     },
-//     {
-//         label: "Garden Groove harbour",
-//         value: "730000"
-//     },
-//     {
-//         label: "Los Angeles Topanga",
-//         value: "590000"
-//     },
-//     {
-//         label: "Compton-Rancho Dom",
-//         value: "520000"
-//     },
-//     {
-//         label: "Daly City Serramonte",
-//         value: "330000"
-//     }]
-//   };
-// });
 

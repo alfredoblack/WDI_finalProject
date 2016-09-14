@@ -4,21 +4,22 @@
  -->
 <img ng-src="{{ playersShow.selected.avatar }}" class="player-picture">
 
-<h2>Team:</h2>
+<h2>Team: {{ playersShow.teams.name }}</h2>
 
 <h3>Player's Attribute Stats</h3>
 
+  {{ playersShow.chartData.dataset[0].data }}
 
-  <div fusioncharts
+  <div fusioncharts ng-if="playersShow.selected"
       type= 'radar',
       renderAt= 'chart-container',
       width= '500',
       height= '350',
       dataFormat='json',
-      dataSource="{{ playersShow.myDataSource }}" >
+      dataSource="{{ playersShow.chartData }}" >
   </div>
 
-
+  <p><a class="btn btn-default" ng-click="playersShow.updateMyChartData()">Click me to change data</a></p>
 
 <table class="table">
   <thead class="thead-inverse">
@@ -47,6 +48,8 @@
     </tr>
         
 </table>
+
+
 
 
 

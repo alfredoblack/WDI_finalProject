@@ -24,9 +24,10 @@ var playerSchema = new mongoose.Schema({
    hits: Number,
    catches: Number,
    rebounds: Number,
-   speed: Number
+   speed: Number,
 
-   // teams: { type: mongoose.Schema.ObjectId, ref: 'Team' }
+
+   teams: { type: mongoose.Schema.ObjectId, ref: 'Team' }
 
 });
 
