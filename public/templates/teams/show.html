@@ -15,17 +15,29 @@
       <tr>
         <th>Player</th>
         <th>Player Name</th>
+        <th>Dodge</th>
+        <th>Dip</th>
+        <th>Dive</th>
+        <th>Duck</th>
         <th>Hits</th>
         <th>Catches</th>
+        <th>Rebounds</th>
+        <th>Speed</th>>
        
       </tr>
     </thead>
   
     <tr ng-repeat="player in teamsShow.selected.players">
-      <td><img ng-src="{{ player.avatar }}"</td>
+      <td><img ng-src="{{ player.avatar }}" class="player-picture"></td>
       <td>{{ player.username }}</td>
-      <td>20</td>
-      <td>15</td>
+      <td>{{ player.dodge }}</td>
+      <td>{{ player.dip }}</td>
+      <td>{{ player.dive }}</td>
+      <td>{{ player.duck }}</td>
+      <td>{{ player.hits }}</td>
+      <td>{{ player.catches }}</td>
+      <td>{{ player.rebounds }}</td>
+      <td>{{ player.speed }}</td>
     </tr>
     
 </table>

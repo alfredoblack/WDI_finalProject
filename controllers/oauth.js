@@ -29,11 +29,13 @@ function github(req, res) {
         if(player) {
           player.githubId = profile.id;
           player.avatar = profile.avatar_url;
+          player.github = profile.html_url;
         } else {
           player = new Player({
             username: profile.login,
             email: profile.email,
             githubId: profile.id,
+            github: profile.html_url,
             avatar: profile.avatar_url
           });
         }

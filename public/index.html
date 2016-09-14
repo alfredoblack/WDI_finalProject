@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.min.js"></script>
   <script src="//npmcdn.com/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="//cdn.jsdelivr.net/satellizer/0.13.1/satellizer.min.js"></script>
+  <script src="/js/fusioncharts.js"></script>
+  <script src="/js/angular-fusioncharts.min.js"></script>
 
   <!-- INTERNAL DIRECTORIES -->
   <script src="/js/client.js"></script>
@@ -26,8 +28,6 @@
   <script src="/js/models/team.js"></script>
   <script src="/js/models/player.js"></script>
   <!-- <script src="js/directives/charts.js"></script> -->
-
-  <!-- <script src="./wrappers/angularjs/angular-fusioncharts.min.js"></script> -->
 
 
  <!--  <script src="node_modules/chart.js/Chart.min.js"></script>
@@ -48,6 +48,9 @@
       <ul class="nav navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" ui-sref="main">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" ui-sref="login.credentials" ng-if="main.currentUser">My Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" ui-sref="playersIndex" ng-if="main.currentUser">Players</a>

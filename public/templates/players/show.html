@@ -2,21 +2,21 @@
 <h1>{{playersShow.selected.name}}</h1>
 <!-- <h1>{{ playersShow.selected.spiritualanimal }}</h1>
  -->
-<img ng-src="{{playersShow.selected.avatar }}" class="player-picture">
+<img ng-src="{{ playersShow.selected.avatar }}" class="player-picture">
 
 <h2>Team:</h2>
 
 <h3>Player's Attribute Stats</h3>
 
-<!-- 
-<div ng-controller="PlayersShowController">
+
   <div fusioncharts
-       width="600"
-       height="400"
-       type="column2d"
-       dataSource="" >
+      type= 'radar',
+      renderAt= 'chart-container',
+      width= '500',
+      height= '350',
+      dataFormat='json',
+      dataSource="{{ playersShow.myDataSource }}" >
   </div>
-</div> -->
 
 
 

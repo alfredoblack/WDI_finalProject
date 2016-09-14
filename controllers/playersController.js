@@ -38,6 +38,7 @@ function playerCreate(req, res) {
 }
 
 function playerUpdate(req, res) {
+
   Player.findById(req.params.id)
     .then(function(player) {
       for(key in req.body) player[key] = req.body[key];

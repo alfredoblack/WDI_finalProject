@@ -1,5 +1,5 @@
 angular
-  .module('DodgeKitApp', ['ngResource', 'ui.router', 'satellizer'])
+  .module('DodgeKitApp', ['ngResource', 'ui.router', 'satellizer', 'ng-fusioncharts'])
   .constant("API_URL", "http://localhost:3000/api")
   .config(oAuthConfig)
   .config(Router);

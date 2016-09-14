@@ -1,6 +1,10 @@
 <h1>players index</h1>
 
 <div class="container">
+  <button ui-sref="playersNew">Become a Player</button>
+</div>
+
+<div class="container">
   <div class="row">
   <ul>
     <li ng-repeat="player in playersIndex.all" ui-sref="playersShow({ id: player._id })">
@@ -13,4 +17,4 @@
 
 
 
-<button ui-sref="playersNew">Add</button>
+

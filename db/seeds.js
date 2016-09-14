@@ -9,38 +9,11 @@ mongoose.connect(databaseUri);
 Team.collection.drop();
 Player.collection.drop();
 
-Team.create([{
-  name: "WDI-21",
-  image:"http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png",
-  defence:12,
-  offence:9,
-  gamesWon:15,
-  gamesPlayed:100
-
-},{
-  name: "the pink panthers",
-  image: "http://www.fillmurray.com/500/600",
-  defence:12,
-  offence:9,
-  gamesWon:15,
-  gamesPlayed:100
-},{
-  name: "The Purple Cobras",
-  image: "http://www.fillmurray.com/600/600",
-  defence:8,
-  offence:19,
-  gamesWon:11,
-  gamesPlayed:14
-}
-], function(err,teams){
-  if(!err)console.log("Teams created!");
-
-Player.create([
-{
+Player.create([{
   username: "Andy",
+  email: "andy@ga.co",
   avatar: "./assets/andy.jpg",
   spiritualanimal: "Cat",
-  // team: teams[0],
   github:"https://github.com/alfredoblack",
   twitter:"https://twitter.com/AdrianaBllack",
   dodge: 15,
@@ -50,13 +23,14 @@ Player.create([
   hits: 19,
   catches: 3,
   rebounds: 18,
-  speed: 20
-},
-{
+  speed: 20,
+  password: "password",
+  passwordConfirmation: "password"
+},{
   username: "Axel",
+  email: "axel@ga.co",
   avatar: "./assets/axel.jpg",
   spiritualanimal: "Panda",
-  // team: teams[0],
   github:"https://github.com/alfredoblack",
   twitter:"https://twitter.com/AdrianaBllack",
   dodge: 15,
@@ -66,14 +40,14 @@ Player.create([
   hits: 19,
   catches: 3,
   rebounds: 18,
-  speed: 20
-
-},
-{
+  speed: 20,
+  password: "password",
+  passwordConfirmation: "password"
+},{
   username: "Cam",
+  email: "cam@ga.co",
   avatar: "./assets/cam.jpg",
   spiritualanimal: "Puppy",
-  // team: teams[0],
   github:"https://github.com/alfredoblack",
   twitter:"https://twitter.com/AdrianaBllack",
   dodge: 15,
@@ -83,14 +57,14 @@ Player.create([
   hits: 19,
   catches: 3,
   rebounds: 18,
-  speed: 20
-
-},
-{
+  speed: 20,
+  password: "password",
+  passwordConfirmation: "password"
+},{
   username: "Smithy",
+  email: "smithy@ga.co",
   avatar: "./assets/smithy.jpg",
   spiritualanimal: "Donkey",
-  // team: teams[0],
   github:"https://github.com/alfredoblack",
   twitter:"https://twitter.com/AdrianaBllack",
   dodge: 15,
@@ -100,14 +74,14 @@ Player.create([
   hits: 19,
   catches: 3,
   rebounds: 18,
-  speed: 20
-
-},
-{
+  speed: 20,
+  password: "password",
+  passwordConfirmation: "password"
+},{
   username: "Chanse",
+  email: "chanse@ga.co",
   avatar: "./assets/chanse.jpg",
   spiritualanimal: "Pug",
-  // team: teams[1],
   github:"https://github.com/tnyrossi",
   twitter:"https://twitter.com/tonio155",
   dodge: 15,
@@ -117,13 +91,14 @@ Player.create([
   hits: 19,
   catches: 3,
   rebounds: 18,
-  speed: 20
-},
-{
+  speed: 20,
+  password: "password",
+  passwordConfirmation: "password"
+},{
   username: "Adri",
+  email: "adri@ga.co",
   avatar: "./assets/adri.jpg",
   spiritualanimal: "jesus lizard",
-  // team: teams[0],
   github:"https://github.com/alfredoblack",
   twitter:"https://twitter.com/AdrianaBllack",
   dodge: 15,
@@ -133,22 +108,37 @@ Player.create([
   hits: 19,
   catches: 3,
   rebounds: 18,
-  speed: 20
-
-}
-], function(err, players){
+  speed: 20,
+  password: "password",
+  passwordConfirmation: "password"
+}], function(err, players){
   if(!err) console.log("Players created");
-  mongoose.connection.close();
+  Team.create([{
+    name: "WDI-21",
+    image:"http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png",
+    defence:12,
+    offence:9,
+    gamesWon:15,
+    gamesPlayed:100,
+    players: [players[0], players[1]]
+  },{
+    name: "the pink panthers",
+    image: "http://www.fillmurray.com/500/600",
+    defence:12,
+    offence:9,
+    gamesWon:15,
+    gamesPlayed:100,
+    players: [players[2], players[3]]
+  },{
+    name: "The Purple Cobras",
+    image: "http://www.fillmurray.com/600/600",
+    defence:8,
+    offence:19,
+    gamesWon:11,
+    gamesPlayed:14,
+    players: [players[4], players[5]]
+  }], function(err,teams){
+    if(!err) console.log("Teams created!");
+    mongoose.connection.close();
   });
-
 });
-
-
-// ,{
-//   name: "Toni",
-//   image: "http://www.fillmurray.com/300/300",
-//   spiritualanimal: "cat",
-//   team: teams[1],
-//   github:"https://github.com/tnyrossi",
-//   twitter:"https://twitter.com/tonio155"
-// },

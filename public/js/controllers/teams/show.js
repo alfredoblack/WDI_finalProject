@@ -2,8 +2,8 @@ angular
   .module('DodgeKitApp')
   .controller('TeamsShowController', TeamsShowController);
 
-TeamsShowController.$inject = ['Team', '$state', '$auth'];
-function TeamsShowController(Team, $state, $auth){
+TeamsShowController.$inject = ['Team', '$state', '$auth','Player'];
+function TeamsShowController(Team, $state, $auth, Player){
   var self = this;
   this.selected = Team.get($state.params);
   this.currentUser = $auth.getPayload();
@@ -16,9 +16,9 @@ function TeamsShowController(Team, $state, $auth){
 
   this.join = function() {
     this.selected.players.push(this.currentUser);
-    Team.update({ id: self.selected._id}, self.selected, function(res) {
-      console.log(res);
-    })
-    console.log(this.selected);
+    Team.update({ id: self.selected._id }, self.selected, function(team) {
+      console.log(team);
+      self.selected = team;
+    });
   }
 }
