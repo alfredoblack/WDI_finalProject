@@ -1,9 +1,16 @@
 <h1>players index</h1>
-<ul>
-  <li ng-repeat="player in playersIndex.all" ui-sref="playersShow({ id: player._id })">
-  <h3>{{ player.name }}</h3>
-  <img src="{{player.avatar}}" class="player-picture">
- </li>
-</ul>
+
+<div class="container">
+  <div class="row">
+  <ul>
+    <li ng-repeat="player in playersIndex.all" ui-sref="playersShow({ id: player._id })">
+      <div class="col-sm-4">
+        <h3>{{ player.name }}</h3>
+        <img src="{{player.avatar}}" class="player-picture">
+      </div>
+    </li>
+  </ul>  
+
+
 
 <button ui-sref="playersNew">Add</button>

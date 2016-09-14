@@ -47,6 +47,11 @@ function Router($stateProvider, $urlRouterProvider) {
       templateUrl: "/templates/players/edit.html",
       controller: "PlayersEditController as playersEdit"
     })
+    .state("socialEdit", {
+      url: "/players/:id/extra-info",
+      templateUrl: "/templates/players/social.html",
+      controller: "PlayersSocialController as playersSocial"
+    })
     .state("teamsIndex", {
       url: "/teams",
       templateUrl: "/templates/teams/index.html",

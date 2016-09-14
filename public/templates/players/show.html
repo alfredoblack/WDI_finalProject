@@ -1,27 +1,27 @@
 <h1>players show</h1>
-<h1>{{playersShow.selected}}</h1>
+<h1>{{playersShow.selected.name}}</h1>
 <!-- <h1>{{ playersShow.selected.spiritualanimal }}</h1>
  -->
 <img ng-src="{{playersShow.selected.avatar }}" class="player-picture">
 
-<!-- <table class="table">
+<table class="table">
   <thead class="thead-inverse">
-      <tr>
-        <th>Player</th>
-        <th>Player Name</th>
-        <th>Hits</th>
-        <th>Catches</th>
-       
-      </tr>
-    </thead>
-        <tr ng-repeat="player in teamsShow.selected.players">
-          <td><img ng-src="{{ player.avatar }}"</td>
-          <td>{{ player.username }}</td>
-          <td>20</td>
-          <td>15</td>
-        </tr>
+    <tr>
+      <th>Player</th>
+      <th>Player Name</th>
+      <th>Hits</th>
+      <th>Catches</th>
+     
+    </tr>
+  </thead>
+    <tr ng-repeat="player in playersShow.selected">
+      <td><img ng-src="{{ player.avatar }}"</td>
+      <td>{{ player.username }}</td>
+      <td>20</td>
+      <td>15</td>
+    </tr>
         
-    </table> -->
+</table>
 
 <!-- <h3>{{playersShow.selected.team.name }}</h3>
  -->

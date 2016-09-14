@@ -8,12 +8,13 @@ var playerSchema = new mongoose.Schema({
   // github: { type: String, required: true, unique: true },
   // twitter: { type: String, required: true, unique: true },
   // team: { type: mongoose.Schema.ObjectId, ref: 'Team' }
-   name: String,
    username: String,
    email: String,
    passwordHash: String,
    githubId: String,
+   github: String,
    twitterId: String,
+   twitter: String,
    avatar: String,
    spiritualanimal: String
    // team: { type: mongoose.Schema.ObjectId, ref: 'Team' }

@@ -19,17 +19,9 @@ Team.create([{
 }], function(err,teams){
   if(!err)console.log("Teams created!");
 
-Player.create([{
-  name: "Adri",
-  avatar: "./assets/adri.jpg",
-  spiritualanimal: "jesus lizard",
-  // team: teams[0],
-  github:"https://github.com/alfredoblack",
-  twitter:"https://twitter.com/AdrianaBllack"
-
-},
+Player.create([
 {
-  name: "Andy",
+  username: "Andy",
   avatar: "./assets/andy.jpg",
   spiritualanimal: "Cat",
   // team: teams[0],
@@ -38,7 +30,7 @@ Player.create([{
 
 },
 {
-  name: "Axel",
+  username: "Axel",
   avatar: "./assets/axel.jpg",
   spiritualanimal: "Panda",
   // team: teams[0],
@@ -47,7 +39,7 @@ Player.create([{
 
 },
 {
-  name: "Cam",
+  username: "Cam",
   avatar: "./assets/cam.jpg",
   spiritualanimal: "Puppy",
   // team: teams[0],
@@ -56,7 +48,7 @@ Player.create([{
 
 },
 {
-  name: "Smithy",
+  username: "Smithy",
   avatar: "./assets/smithy.jpg",
   spiritualanimal: "Donkey",
   // team: teams[0],
@@ -65,12 +57,21 @@ Player.create([{
 
 },
 {
-  name: "Chanse",
+  username: "Chanse",
   avatar: "./assets/chanse.jpg",
   spiritualanimal: "Pug",
   // team: teams[1],
   github:"https://github.com/tnyrossi",
   twitter:"https://twitter.com/tonio155"
+},
+{
+  username: "Adri",
+  avatar: "./assets/adri.jpg",
+  spiritualanimal: "jesus lizard",
+  // team: teams[0],
+  github:"https://github.com/alfredoblack",
+  twitter:"https://twitter.com/AdrianaBllack"
+
 }
 ], function(err, players){
   if(!err) console.log("Players created");

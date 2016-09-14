@@ -3,8 +3,8 @@ angular
   .controller('MainController', MainController);
 
 
-  MainController.$inject = ['$auth', '$state', '$rootScope'];
-  function MainController($auth, $state, $rootScope) {
+  MainController.$inject = ['$auth', '$state', '$rootScope', 'Player'];
+  function MainController($auth, $state, $rootScope, Player) {
     var self = this;
 
     this.currentUser = $auth.getPayload();
@@ -12,9 +12,22 @@ angular
     this.authenticate = function(provider) {
       $auth.authenticate(provider)
         .then(function(){
-          $rootScope.$broadcast("loggedIn");
+          $rootScope.$broadcast("socialLoggedIn");
         });
     }
+
+    $rootScope.$on("socialLoggedIn", function(){
+      self.currentUser = $auth.getPayload();
+
+      Player.get({ id: self.currentUser._id }, function(res) {
+        console.log(res);
+        if(!res.spiritualanimal){
+          $state.go('socialEdit', {'id': self.currentUser._id });
+        } else {
+          $state.go("main");
+        }
+      })
+    });
 
     $rootScope.$on("loggedIn", function(){
       $state.go("main");

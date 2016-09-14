@@ -1,0 +1,45 @@
+<h1>We just need a few extra bits of information..</h1>
+
+<form ng-submit="playersSocial.save()">
+
+  <div class="form-group">
+    <label for="formGroupExampleInput">Username</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" ng-model="playersSocial.selected.username" placeholder="Username">
+  </div>
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Avatar</label>
+    <img src="{{playersSocial.selected.avatar}}" class="player-picture">
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersSocial.selected.avatar" placeholder="Your best portrait">
+  </div>
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Spiritual Animal</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersSocial.selected.spiritualanimal" placeholder="What you become">
+  </div>
+
+<!--   <div class="form-group">
+    <label for="formGroupExampleInput2">Team</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersSocial.selected.team.name" placeholder="Your Team name">
+  </div> -->
+
+<!--   <div class="form-group">
+    <label for="formGroupExampleInput2">Team</label>
+    <select name="team" ng-model="playersSocial.selected.team">
+      <option disabled selected value="">Please select</option>
+      <option ng-repeat="team in playersSocial.teams" ng-value="team._id" ng-selected="team._id === playersSocial.selected.team._id">{{team.name}}</option>
+    </select>
+  </div>   -->
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Github</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersSocial.selected.github" placeholder="Github URL">
+  </div>
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Twitter</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersSocial.selected.twitter" placeholder="Twitter URL">
+  </div>
+
+  <button>Save</button>
+</form>

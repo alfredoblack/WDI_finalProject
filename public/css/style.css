@@ -1,5 +1,5 @@
 body {
-  background-color: lightgreen;
+  background-color: lightblue;
 }
 
 .player-picture {
@@ -15,4 +15,13 @@ body {
 .teamofficial{
   height: 300px;
   width: auto;
+}
+
+.logo {
+  height:60px;
+  width: auto;
+}
+
+ul {
+  list-style: none;
 }

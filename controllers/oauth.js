@@ -24,7 +24,7 @@ function github(req, res) {
     })
   })
   .then(function(profile) {
-    return Player.findOne({ email: profile.email })
+    return Player.findOne({ githubId: profile.id })
       .then(function(player) {
         if(player) {
           player.githubId = profile.id;
@@ -108,6 +108,7 @@ function twitter(req, res) {
           if(player) {
             player.twitterId = profile.id;
             player.avatar = profile.profile_image_url;
+
           }
           else {
             player = new Player({

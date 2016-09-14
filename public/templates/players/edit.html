@@ -3,18 +3,19 @@
 <form ng-submit="playersEdit.save()">
 
   <div class="form-group">
-    <label for="formGroupExampleInput">Name</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" ng-model="playersEdit.selected.name" placeholder="Full Name">
+    <label for="formGroupExampleInput">Username</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" ng-model="playersEdit.selected.username" placeholder="Username">
   </div>
 
   <div class="form-group">
-    <label for="formGroupExampleInput2">Image</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.image"placeholder="your best portrait">
+    <label for="formGroupExampleInput2">Avatar</label>
+    <img src="{{playersEdit.selected.avatar}}" class="player-picture">
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.avatar" placeholder="Your best portrait">
   </div>
 
   <div class="form-group">
     <label for="formGroupExampleInput2">Spiritual Animal</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.spiritualanimal" placeholder="what you become">
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.spiritualanimal" placeholder="What you become">
   </div>
 
 <!--   <div class="form-group">
@@ -22,23 +23,23 @@
     <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.team.name" placeholder="Your Team name">
   </div> -->
 
-  <div class="form-group">
+<!--   <div class="form-group">
     <label for="formGroupExampleInput2">Team</label>
     <select name="team" ng-model="playersEdit.selected.team">
       <option disabled selected value="">Please select</option>
       <option ng-repeat="team in playersEdit.teams" ng-value="team._id" ng-selected="team._id === playersEdit.selected.team._id">{{team.name}}</option>
     </select>
-  </div>  
+  </div>   -->
 
   <div class="form-group">
     <label for="formGroupExampleInput2">Github</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.github" placeholder="Github ">
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.github" placeholder="Github URL">
   </div>
 
   <div class="form-group">
     <label for="formGroupExampleInput2">Twitter</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.twitter" placeholder="Twitter">
+    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersEdit.selected.twitter" placeholder="Twitter URL">
   </div>
 
-  <button>save</button>
+  <button>Save</button>
 </form>

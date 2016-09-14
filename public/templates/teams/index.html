@@ -5,6 +5,8 @@
 </ul> -->
 
 
+<h2>Leader Board</h2>
+
 <table class="table">
   <thead class="thead-inverse">
       <tr>
@@ -18,6 +20,30 @@
        
       </tr>
     </thead>
+  
+    <tr ng-repeat="team in teamsIndex.all">
+      <td><img ng-src="{{ team.image }}" class="team-picture"</td>
+      <td ui-sref="teamsShow({ id: team._id })">{{ team.name }}</td>
+      <td>20</td>
+      <td>15</td>
+    </tr>
+    
+</table>
+
+<h2>Teams in Tournament</h2>
+
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Team</th>
+      <th>Team Name</th>
+      <th>Hits</th>
+      <th>Catches</th>
+      <th>Games Won</th>
+      <th>Total Games Played</th>
+      <th>GD</th>
+    </tr>
+  </thead>
   
     <tr ng-repeat="team in teamsIndex.all">
       <td><img ng-src="{{ team.image }}" class="team-picture"</td>
