@@ -10,14 +10,13 @@
 
   {{ playersShow.chartData.dataset[0].data }}
 
-  <div class="fusionchart" fusioncharts ng-if="playersShow.selected"
-      type= 'radar',
-      renderAt= 'chart-container',
-      width= '500',
-      height= '350',
-      dataFormat='json',
-      dataSource="{{ playersShow.chartData }}" >
-  </div>
+  <fusioncharts ng-if="playersShow.chartData"
+      type="radar"
+      width="500"
+      height="350"
+      dataFormat="json"
+      dataSource="{{ playersShow.chartData }}">
+  </fusioncharts>
 
   <p><a class="btn btn-default" ng-click="playersShow.updateMyChartData()">Click me to change data</a></p>
 

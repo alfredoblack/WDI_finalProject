@@ -9,7 +9,6 @@ function PlayersShowController(Player, $state, Team) {
 
   Player.get($state.params, function(player) {
     self.selected = player;
-    console.log(self.selected);
     self.chartData = {
       chart: {
         caption: "Player Attributes Chart",

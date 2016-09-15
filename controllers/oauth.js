@@ -94,7 +94,8 @@ function twitter(req, res) {
       return request.get({
         url: "https://api.twitter.com/1.1/users/show.json",
         qs: {
-          screen_name: token.screen_name
+          screen_name: token.screen_name,
+          // url: token.url
         },
         oauth: {
           consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -107,16 +108,25 @@ function twitter(req, res) {
     .then(function(profile) {
       return Player.findOne({ twitterId: profile.id })
         .then(function(player) {
+          // reference for sample profile:
+          // https://dev.twitter.com/rest/reference/get/users/show
           if(player) {
+            console.log('twitter profile:', profile);
+            player.url = profile.url;
+            // player.username = profile.screen_name; // TODO: check this is correct
+            player.username = profile.name; 
             player.twitterId = profile.id;
             player.avatar = profile.profile_image_url;
+            // player.address= profile.url;
 
           }
           else {
             player = new Player({
-              username: profile.name,
+              username: profile.name, // TODO: check this is correct
+              // username: profile.screen_name, // TODO: check this is correct
               twitterId: profile.id,
-              avatar: profile.profile_image_url
+              avatar: profile.profile_image_url,
+              // address: profile.url
             });
           }
 
@@ -127,7 +137,8 @@ function twitter(req, res) {
       var payload = {
         _id: player._id,
         username: player.username,
-        avatar: player.avatar
+        avatar: player.avatar,
+        // address: player.url
       };
 
       var token = jwt.sign(payload, secret, { expiresIn: '24h' });

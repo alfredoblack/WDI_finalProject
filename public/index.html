@@ -35,6 +35,8 @@
   <!-- CSS -->
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Farsan|Permanent+Marker" rel="stylesheet">
  
   
 
@@ -54,19 +56,16 @@
           <a class="nav-link" href="#" ui-sref="playersIndex" ng-if="main.currentUser">Players</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#" ui-sref="register" ng-if="!main.currentUser">Register</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#" ui-sref="teamsIndex" ng-if="main.currentUser">Teams</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" ui-sref="login" ng-if="!main.currentUser">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ui-sref="register" ng-if="!main.currentUser">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ui-sref="main" ng-if="main.currentUser" ng-click="main.logout()">Logout</a>
+          <a class="nav-link" ui-sref="main" ng-if="main.currentUser" ng-click="main.logout()">Logout</a> 
         </li>
       </ul>
     </nav>

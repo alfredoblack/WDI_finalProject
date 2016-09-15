@@ -10,7 +10,10 @@ function PlayersEditController(Player, $state, Team) {
 console.log(this.selected)
   this.save = function() {
     this.selected.$update(function() {
-      $state.go('playersIndex', $state.params);
+      $state.go('playersIndex', $state.params); 
     });
   }
 }  
+ 
+
+ 
