@@ -40,7 +40,7 @@
 
 </head>
   <body ng-controller="MainController as main">
-    <nav class="navbar navbar-light bg-faded">
+    <nav class="navbar navbar-light bg-faded tiger">
       <a class="navbar-brand" href="#"><img src="./assets/league-logo.png" class="logo"> Dodgeball K.I.T</a>
 
       <ul class="nav navbar-nav">
@@ -48,16 +48,13 @@
           <a class="nav-link" ui-sref="main">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" ui-sref="login.credentials" ng-if="main.currentUser">My Profile</a>
+          <a class="nav-link" href="#" ui-sref="playersShow.selected.name" ng-if="main.currentUser">My Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" ui-sref="playersIndex" ng-if="main.currentUser">Players</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" ui-sref="teamsIndex" ng-if="main.currentUser">Teams</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" ng-if="main.currentUser">Games</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
@@ -72,10 +69,6 @@
           <a class="nav-link" ui-sref="main" ng-if="main.currentUser" ng-click="main.logout()">Logout</a>
         </li>
       </ul>
-      <form class="form-inline pull-xs-right">
-        <input class="form-control" type="text" placeholder="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </nav>
 
    <div class="container">

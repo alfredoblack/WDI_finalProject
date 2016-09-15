@@ -1,5 +1,9 @@
 body {
-  background-color: lightblue;
+ background-image: url('/assets/ready.jpg')no-repeat center center fixed;
+ background-repeat: no-repeat;
+ background: cover;
+ background-attachment: fixed;
+ height: 80vh;
 }
 
 .player-picture {
@@ -42,3 +46,20 @@ ul {
   border: 1px solid black;
 /*  padding: 5px;
 */}
+
+.twatshowbox {
+  width: 400px;
+  height: 600px;
+  overflow: scroll;
+}
+
+.tiger{
+  background-color: transparent;
+  font-size: 19px;
+}
+
+/*//SHOW PAGE*/
+
+.fushionchart{
+  border: 1px solid black;
+}

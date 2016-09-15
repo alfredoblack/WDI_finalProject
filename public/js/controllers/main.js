@@ -48,11 +48,14 @@ angular
       console.log("connected");
     });
 
-    var counter = 0;
 
     socket.on("tweets", function(tweet){
-      $('#tweetbox').prepend('<div class="row"><div class="col-md-2"><img src="' + tweet.user_profile_image + '" class="avatar pull-left"/></div><div class="col-md-2"><div class="names"><span class="full-name"><strong>@' + tweet.name + ' </strong></span></div></div><div class="col-md-8"><div class="contents"><span class="text">' + tweet.text + '</span></div></div></div><br>');
+      $('#tweetbox').prepend(
+        '<div class="row"><div class="col-md-2"><img src="' + tweet.user_profile_image + '" class="avatar pull-left"/></div><div class="col-md-2"><div class="names"><span class="full-name"><strong>@' + tweet.name + ' </strong></span></div></div><div class="col-md-8"><div class="contents"><span class="text">' + tweet.text + '</span></div></div></div><br>');
          // console.log(tweet.text, tweet.name, tweet.user_profile_image);
     });
 
   }
+
+
+

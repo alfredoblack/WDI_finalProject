@@ -16,4 +16,4 @@ function LoginController(Player, $state, $rootScope, $auth) {
    this.player = {};
  }
 
-}
+} 

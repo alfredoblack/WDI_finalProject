@@ -10,7 +10,7 @@
 
   {{ playersShow.chartData.dataset[0].data }}
 
-  <div fusioncharts ng-if="playersShow.selected"
+  <div class="fusionchart" fusioncharts ng-if="playersShow.selected"
       type= 'radar',
       renderAt= 'chart-container',
       width= '500',
@@ -21,7 +21,8 @@
 
   <p><a class="btn btn-default" ng-click="playersShow.updateMyChartData()">Click me to change data</a></p>
 
-<!--   <a class="twitter-timeline" href="https://twitter.com/AdrianaBllack">Tweets by AdrianaBllack</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
+<div class="twatshowbox"><a class="twitter-timeline" href="{{playersShow.selected.twitter }}">Tweets by AdrianaBllack</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
 <table class="table">
   <thead class="thead-inverse">
@@ -55,8 +56,8 @@
 
 
 
-<!-- <h3>{{playersShow.selected.team.name }}</h3>
- -->
+<h3>{{playersShow.selected.twitter }}</h3>
+
 <button ui-sref="playersEdit({ id: playersShow.selected._id })">Edit</button>
 <button ng-click="playersShow.delete()">Delete</button>
 
