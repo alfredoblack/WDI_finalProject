@@ -13,4 +13,4 @@ console.log(this.selected)
       $state.go('playersIndex', $state.params);
     });
   }
-}
+}  

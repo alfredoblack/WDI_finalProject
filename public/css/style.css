@@ -26,12 +26,9 @@ ul {
   list-style: none;
 }
 
-charts{
-  height: 200px;
-  width: auto;
-}
-
-.charts{
-  height: 200px;
-  width: auto;
+.testing{
+ /* height: auto;
+  width: 150px;*/
+  border: 1px, solid, black;
+  /*margin: 0 auto;*/
 }
