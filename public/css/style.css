@@ -32,3 +32,13 @@ ul {
   border: 1px, solid, black;
   /*margin: 0 auto;*/
 }
+
+#tweetbox {
+/*  text-align: center;
+*/  height: 600px;
+  width: 600px;
+  overflow: scroll;
+  background: white;
+  border: 1px solid black;
+/*  padding: 5px;
+*/}
