@@ -1,11 +1,15 @@
 <h1></h1>
-<div class="jumbotron jumbotron-fluid phone">
+
+<div class="dumbo">
+<div class="jumbotron jumbotron-fluid phone" ng-if="!main.currentUser">
   <div class="container">
     <h1 class="display-3">Dodgeball</h1>
     
     <p class="lead">"If you can dodge a wrench, you can dodge a ball."</p>
 
   </div>
+</div>
+
 </div>
 
 <div class='container kelly' ng-if="main.currentUser">
@@ -35,5 +39,5 @@
   </span>
 </a>
   
-  <button class="btn btn-primary ui-sref="login" ng-if="!main.currentUser">Log in with e-mail</button>
+  <button class="btn btn-primary" ui-sref="login" ng-if="!main.currentUser">Log in with e-mail</button>
 </div>

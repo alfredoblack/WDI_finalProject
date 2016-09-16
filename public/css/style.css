@@ -9,6 +9,7 @@ body {
 
 .home{
   font-family: 'Droid Sans Mono', monospace;
+
 }
 
 
@@ -154,8 +155,18 @@ ul {
 }
 
 .tiger{
-  background-color: transparent;
   font-size: 19px;
+  background-color: gray;
+}
+
+navbar-light .navbar-nav .nav-link {
+    color: white;
+    letter-spacing: 2px;
+}
+
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .active>.nav-link:focus, .navbar-light .navbar-nav .active>.nav-link:hover, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.active:focus, .navbar-light .navbar-nav .nav-link.active:hover, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.open:focus, .navbar-light .navbar-nav .nav-link.open:hover, .navbar-light .navbar-nav .open>.nav-link, .navbar-light .navbar-nav .open>.nav-link:focus, .navbar-light .navbar-nav .open>.nav-link:hover {
+    color: white;
 }
 
 .bear{
@@ -196,7 +207,7 @@ ul {
   font-style: italic;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Farsan', cursive;
-  font-size: 30px;
+  font-size: 43px;
   float: right;
   padding-right: 82px;
 
@@ -223,7 +234,20 @@ ul {
 }
 
 .phone{
-  background-color: rgba(225,225,225, .5);
+  background-color: transparent;
+}
+
+.jumbotron-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+    margin-top: 221px;
+}
+
+.dumbo{
+ height: auto;
+ width: auto;
+ color: #d8d502;
 }
 
 .sociallogin{
