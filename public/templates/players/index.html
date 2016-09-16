@@ -1,19 +1,28 @@
-<h1>players index</h1>
 
-<div class="container">
-  <button ui-sref="playersNew">Become a Player</button>
-</div>
 
-<div class="container">
-  <div class="row">
-  <ul>
-    <li ng-repeat="player in playersIndex.all" ui-sref="playersShow({ id: player._id })">
-      <div class="col-sm-4">
-        <h3>{{ player.username }}</h3>
-        <img src="{{player.avatar}}" class="player-picture">
-      </div>
-    </li>
-  </ul>  
+  <div class="container playball">
+
+  <h1 class="honeforms"><p class="exception">The Players
+    <button class="btn btn-primary inbtn"  ui-sref="playersNew">Add a Player</button>
+    </p>
+  </h1>
+
+
+  <div class="container">
+    <div class="row">
+    <ul>
+      <li ng-repeat="player in playersIndex.all" ui-sref="playersShow({ id: player._id })">
+
+        <div class="col-md-3 playas">
+          <h3>{{ player.username }}</h3>
+          <img src="{{player.avatar}}" class="player-picture">
+          <p class="quotes">{{player.quote}}</p>
+        </div>
+      </li>
+
+    </ul>  
+    </div>
+
 
 
 

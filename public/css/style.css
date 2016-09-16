@@ -5,6 +5,76 @@ body {
  background-attachment: fixed;
  height: 80vh;
 }
+/*HOME*/
+
+.home{
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+
+
+/*PLAYERS INDEX*/
+
+.playball{
+  height: auto;
+  width: auto;
+}
+
+.inbtn{
+  color: #fff;
+  background-color: #98d802;
+  border-color: #0275d8;
+  float: right;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 19px;
+  margin-top: 18px;
+}
+
+.h3, h3 {
+    font-size: 38px;
+    margin: 15px;
+    background: rgba(225,225,225, .7);
+    /* text-align: left; */
+    font-family: 'Permanent Marker', cursive;
+    border-radius: 11px;
+}
+
+.playas{
+  text-align: center;
+  margin-bottom: 66px;
+}
+
+.quotes{
+  height: 60px;
+  width: 230px;
+  background: rgba(0,0,0, .6);
+  text-align: left;
+  margin-top: 9px;
+  padding: 4px;
+  font-size: 17px;
+  color: white;
+  font-family: 'Droid Sans Mono', monospace;
+  font-style: italic;
+  max-width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out; 
+  text-overflow: clip;
+
+}
+
+
+.quotes:hover {
+ overflow:visible;
+ height: auto;
+ transform: scale(1.1);
+}
+
+
+
+
+
+/*FORMS*/
 
 .formbeer{
   height: auto;
@@ -20,6 +90,19 @@ body {
 }*/
 .rowL{
   padding: 20px;
+}
+
+.honeforms{
+  font-family: 'Permanent Marker', cursive;
+  padding: 20px;
+}
+
+.exception{
+ background: rgba(0,0,0, .6);
+ color: white;
+ font-size: 70px;
+ padding: 20px;
+ border-radius: 11px;
 }
 
 .player-picture {
@@ -48,6 +131,7 @@ ul {
 
 .testing{
   border: 1px, solid, black;
+  background: rgba(225,225,225, .7)
   
 }
 
@@ -58,6 +142,7 @@ ul {
   overflow: scroll;
   background: rgba(225,225,225, .7);
   margin-left: 241px;
+
 }
 
 .twatshowbox {
@@ -126,7 +211,6 @@ ul {
 .kelly{
   height: auto;
   width: auto;
-  border: 1px solid;
   text-align: center;
 }
 
@@ -151,6 +235,12 @@ ul {
  padding-top: 50px;
 }
 
+
+/*//SHOW PAGE*/
+
+.fushionchart{
+  border: 1px solid black;
+}
 
 .sc-btn {
   display: inline-block;
@@ -202,11 +292,6 @@ ul {
   padding: .95em 1em .85em 1em;
   font-size: 1.15em;
   text-align: center; }
-
-/*svg {
-  width: 1.8em;
-  height: 1.8em;
-  fill: #fff; }*/
 
 .sc-block {
   display: block; }
@@ -388,8 +473,4 @@ ul {
     background-image: -o-linear-gradient(top, #ec893c, #c96213);
     background-image: linear-gradient(top, #ec893c, #c96213); }
 
-/*//SHOW PAGE*/
 
-.fushionchart{
-  border: 1px solid black;
-}

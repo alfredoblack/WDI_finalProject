@@ -17,6 +17,7 @@ var playerSchema = new mongoose.Schema({
    twitter: String,
    avatar: String,
    spiritualanimal: String,
+   quote:String,
    dodge: Number,
    dip: Number,
    dive: Number,

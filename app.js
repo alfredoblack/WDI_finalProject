@@ -49,7 +49,7 @@ var twitter = new Twit({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
-var stream = twitter.stream("statuses/filter", {track: ["dodgeball"]});
+var stream = twitter.stream("statuses/filter", {track: ["dodgeball", "junior developers", "#juniordevelopers"]});
 io.on("connect", function(socket){
   stream.on("tweet", function(tweet){
     var data = {};

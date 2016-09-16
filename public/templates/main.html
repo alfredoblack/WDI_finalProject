@@ -5,22 +5,16 @@
     
     <p class="lead">"If you can dodge a wrench, you can dodge a ball."</p>
 
-    
-    
-    <button ui-sref="register" ng-if="!main.currentUser">Register</button>
-  
-<!--     <button ng-click="main.authenticate('github')">Sign in with GitHUB</button>
-    <button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>
- -->  </div>
+  </div>
 </div>
 
 <div class='container kelly' ng-if="main.currentUser">
 <div class="twattitle"><div class='bird'></div><p class="words" id="subtitle">The Dodge Dip Dive Duck Tweets<small class="smallletters"> & Jr Dev Jobs</small></p></div>
  <div id="tweetbox"></div>
-  <!-- <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
 </div>
 <div class="container sociallogin">
-<!-- .sc--twitter -->
+
 <!-- GITHUB -->
 <a href="" ng-if="!main.currentUser" ng-click="main.authenticate('github')" class="sc-btn sc--github">
   <span class="sc-icon">
@@ -41,5 +35,5 @@
   </span>
 </a>
   
-  <button ui-sref="login" ng-if="!main.currentUser">LogIn</button>
+  <button class="btn btn-primary ui-sref="login" ng-if="!main.currentUser">Log in with e-mail</button>
 </div>

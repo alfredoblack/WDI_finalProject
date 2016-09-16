@@ -37,34 +37,39 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Farsan|Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Indie+Flower|Space+Mono" rel="stylesheet">
  
   
 
 </head>
   <body ng-controller="MainController as main">
     <nav class="navbar navbar-light bg-faded tiger">
-      <a class="navbar-brand" href="#"><img src="./assets/league-logo.png" class="logo"> Dodgeball K.I.T</a>
+      <a class="navbar-brand" href="#"><img src="./assets/league-logo.png" class="logo"></a>
 
       <ul class="nav navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link home" href="#" ui-sref="main" ng-if="main.currentUser"><h2>Dodgeball K.I.T</h2></a>
+      </li>
         <li class="nav-item active">
-          <a class="nav-link" ui-sref="main">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link home" ui-sref="main">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" ui-sref="playersShow.selected.name" ng-if="main.currentUser">My Profile</a>
+          <a class="nav-link home" href="#" ui-sref="playersShow" ng-if="main.currentUser">My Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" ui-sref="playersIndex" ng-if="main.currentUser">Players</a>
+          <a class="nav-link home" href="#" ui-sref="playersIndex" ng-if="main.currentUser">Players</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" ui-sref="register" ng-if="!main.currentUser">Register</a>
+          <a class="nav-link home" href="#" ui-sref="register" ng-if="!main.currentUser">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" ui-sref="teamsIndex" ng-if="main.currentUser">Teams</a>
+          <a class="nav-link home" href="#" ui-sref="teamsIndex" ng-if="main.currentUser">Teams</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item home">
           <a class="nav-link" href="#">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item home">
           <a class="nav-link" ui-sref="main" ng-if="main.currentUser" ng-click="main.logout()">Logout</a> 
         </li>
       </ul>

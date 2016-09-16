@@ -1,47 +1,53 @@
-<h1>players new</h1>
+<div class="container formbeer">
+<h1 class="honeforms">Add a New Player</h1>
 
 <form ng-submit="playersNew.create()">
 
-  <div class="form-group">
+  <div class="form-group col-md-7 col-md-offset-5">
     <label for="formGroupExampleInput">Name</label>
     <input type="text" class="form-control" id="formGroupExampleInput" ng-model="playersNew.new.username" placeholder="Full Name">
   </div>
 
-  <div class="form-group">
+  <div class="form-group col-md-7 col-md-offset-5">
     <label for="formGroupExampleInput2">Image</label>
     <input type="text" class="form-control player-picture" id="formGroupExampleInput2" ng-model="playersNew.new.avatar" placeholder="your best portrait">
   </div>
 
-  <div class="form-group">
+  <div class="form-group col-md-7 col-md-offset-5">
     <label for="formGroupExampleInput2">Spiritual Animal</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.spiritualanimal" placeholder="what you become">
   </div>
 <!-- 
-  <div class="form-group">
+  <div class="form-group col-md-7 col-md-offset-5">
     <label for="formGroupExampleInput2">Team</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.team.name" placeholder="Your Team name">
   </div> -->
-<div class="form-group">
+<!--  <div class="form-group col-md-7 col-md-offset-5">
 <label for="formGroupExampleInput2">Team</label>
   <select name="team" ng-model="playersNew.new.team">
     <option disabled selected value="">Please select</option>
     <option ng-repeat="team in playersNew.teams" ng-value="team._id">{{team.name}}</option>
   </select>
+</div> -->
+
+<div class="form-group col-md-7 col-md-offset-5">
+  <label for="formGroupExampleInput2">Quote</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.quote" placeholder="What are you thinking...">
 </div>
 
 
-  <div class="form-group">
+  <div class="form-group col-md-7 col-md-offset-5">
     <label for="formGroupExampleInput2">Github</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.github" placeholder="Github ">
   </div>
 
-  <div class="form-group">
+  <div class="form-group col-md-7 col-md-offset-5">
     <label for="formGroupExampleInput2">Twitter</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="playersNew.new.twitter" placeholder="Twitter">
   </div>
+</div>
 
 <div class="containter testing" >
-
 
   <div class="container">
     <div class="row">
@@ -100,7 +106,10 @@
 
   </div>
 
+  <button>save</button>
 </div>
 
-  <button>save</button>
+  
 </form>
+
+
