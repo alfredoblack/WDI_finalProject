@@ -1,22 +1,32 @@
 <!-- <h1>players show</h1> -->
 <h3>Player's Stats</h3>
 
-<div class="profilemain">
+<div class="container profilemain">
+
+<!-- <div class="container profiletwo">
+  <img ng-src="{{ playersShow.selected.avatar }}" class="player-picture">
+</div> -->
   <div class="container profileone">
-    <h1>{{playersShow.selected.username}}</h1>
-    <h2>{{ playersShow.selected.spiritualanimal }}</h2>
+    <img ng-src="{{ playersShow.selected.avatar }}" class="player-picture">
+    <h1 class="pindex">{{playersShow.selected.username}}</h1>
+    <h2 class="pattr"> Spiritual Animal: {{ playersShow.selected.spiritualanimal }}</h2>
+    <h2 class="pattr">Known for: "{{ playersShow.selected.quote }}"</h2>
+    <div class="container pink">
+    <button class="btn btn-primary" ui-sref="playersEdit({ id: playersShow.selected._id })">Edit</button>
+    <button class="btn btn-primary" ng-click="playersShow.delete()">Delete</button>
+    </div>
   </div>
 
-  <div class="container profiletwo">
-    <img ng-src="{{ playersShow.selected.avatar }}" class="player-picture">
-  </div>
+  
 </div>
 <!-- <h2>Team: {{ playersShow.teams.name }}</h2> -->
 
-<h3>Player's Attribute Stats</h3>
+<h3>Player's Attributes</h3>
 
 <!--   {{ playersShow.chartData.dataset[0].data }}
  -->
+
+ <div class="container adri">
   <fusioncharts ng-if="playersShow.chartData"
       type="radar"
       width="500"
@@ -30,11 +40,11 @@
 
 <div class="twatshowbox"><a class="twitter-timeline" href="{{playersShow.selected.twitter }}">Tweets by AdrianaBllack</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
+</div>
 <!-- 
 <h3>{{playersShow.selected.twitter }}</h3> -->
 
-<button ui-sref="playersEdit({ id: playersShow.selected._id })">Edit</button>
-<button ng-click="playersShow.delete()">Delete</button>
+
 
 
 

@@ -1,30 +1,30 @@
-<h1>teams index</h1>
+<!-- <h1>teams index</h1>
 
 <h2>Leader Board</h2>
-<p>Coming Soon...</p>
+<p>Coming Soon...</p> -->
 
+<div class="container playball">
+<h2 class ="honeforms">Teams in Tournament</h2>
 
-<h2>Teams in Tournament</h2>
-
-<table class="table">
+<table class="table juice">
   <thead class="thead-inverse">
       <tr>
-        <th>Team</th>
-        <th>Team Name</th>
-        <th>Defence</th>
-        <th>Offence</th>
-        <th>Games Won</th>
-        <th>Games Played</th>
+        <th class="honeformsp">Team</th>
+        <th class="honeformsp">Team Name</th>
+        <th class="honeformsp">Defence</th>
+        <th class="honeformsp">Offence</th>
+        <th class="honeformsp">Games Won</th>
+        <th class="honeformsp">Games Played</th>
       </tr>
     </thead>
   
     <tr ng-repeat="team in teamsIndex.all">
       <td><img ng-src="{{ team.image }}" class="team-picture"</td>
-      <td ui-sref="teamsShow({ id: team._id })">{{ team.name }}</td>
-      <td>{{ team.defence}}</td>
-      <td>{{ team.offence}}</td>
-      <td>{{ team.gamesWon}}</td>
-      <td>{{ team.gamesPlayed}}</td>
+      <td class="homea" ui-sref="teamsShow({ id: team._id })">{{ team.name }}</td>
+      <td class="homea">{{ team.defence}}</td>
+      <td class="homea">{{ team.offence}}</td>
+      <td class="homea">{{ team.gamesWon}}</td>
+      <td class="homea">{{ team.gamesPlayed}}</td>
   
     </tr>
     
@@ -34,3 +34,5 @@
 
 
 <button ui-sref="teamsNew">Add</button>
+
+</div>

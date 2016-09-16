@@ -12,6 +12,12 @@ body {
 
 }
 
+.homea{
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 25px;
+  text-align: center;
+}
+
 
 
 /*PLAYERS INDEX*/
@@ -98,6 +104,28 @@ body {
   padding: 20px;
 }
 
+.honeformsp{
+ font-family: 'Permanent Marker', cursive;
+ padding: 20px;
+ font-size: 29px;
+ text-align: center;
+ letter-spacing: 5px;
+}
+
+.pindex{
+  font-family: 'Permanent Marker', cursive;
+  padding: 20px;
+  font-size: 52px;
+}
+
+.pattr{
+ font-family: 'Droid Sans Mono', monospace;
+ font-size: 20px;
+ margin: 0;
+ padding: 7px;
+ letter-spacing: 0px;
+}
+
 .exception{
  background: rgba(0,0,0, .6);
  color: white;
@@ -107,8 +135,9 @@ body {
 }
 
 .player-picture {
-  height: 200px;
+  height: 250px;
   width: auto;
+  border-radius: 11px;
 }
 
 .team-picture {
@@ -147,8 +176,8 @@ ul {
 }
 
 .twatshowbox {
-  width: 400px;
-  height: 600px;
+  width: 505px;
+  height: 657px;
   overflow: scroll;
   padding: 43px;
 
@@ -171,27 +200,29 @@ navbar-light .navbar-nav .nav-link {
 }
 
 .profileone{
-  width: 50%;
-  height: auto;
-  border: 1px solid
+  width: 500px;
+  height: 500px;
+  background: rgba(0,0,0, .6);
+  color: white;
+  border-radius: 11px;
+  padding-top: 32px;
+  margin-left: 161px;
 }
 
 .profiletwo{
   width: 165px;
   height: auto;
-  border: 1px solid
+  
 }
 .profilemain{
   width: auto;
   height: auto;
-  border: 1px solid pink;
 
 }
 
 
 .bear{
   padding: 20px 10px 10px 10px;
-  border: 1px solid;
   }
 
 
@@ -226,10 +257,17 @@ navbar-light .navbar-nav .nav-link {
 .lead{
   font-style: italic;
   font-family: 'Permanent Marker', cursive;
-  font-family: 'Farsan', cursive;
-  font-size: 43px;
+  font-family: 'Droid Sans Mono', monospace;
   float: right;
   padding-right: 82px;
+  font-size: 25px;
+
+}
+
+.juice{
+  height: auto;
+  width: auto;
+  background: rgba(225,225,225, .7);
 
 }
 
@@ -279,11 +317,21 @@ navbar-light .navbar-nav .nav-link {
  padding-top: 50px;
 }
 
+/*.pink{
+  padding:10px;
+  margin-left: 866px;
+}*/
+
+.adri{
+  height: 1000px;
+  width: 800px;
+ 
+}
 
 /*//SHOW PAGE*/
 
 .fushionchart{
-  border: 1px solid black;
+ 
 }
 
 .sc-btn {
