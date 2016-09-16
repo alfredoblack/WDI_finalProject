@@ -157,6 +157,7 @@ ul {
 .tiger{
   font-size: 19px;
   background-color: gray;
+
 }
 
 navbar-light .navbar-nav .nav-link {
@@ -168,6 +169,25 @@ navbar-light .navbar-nav .nav-link {
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .active>.nav-link:focus, .navbar-light .navbar-nav .active>.nav-link:hover, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.active:focus, .navbar-light .navbar-nav .nav-link.active:hover, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.open:focus, .navbar-light .navbar-nav .nav-link.open:hover, .navbar-light .navbar-nav .open>.nav-link, .navbar-light .navbar-nav .open>.nav-link:focus, .navbar-light .navbar-nav .open>.nav-link:hover {
     color: white;
 }
+
+.profileone{
+  width: 50%;
+  height: auto;
+  border: 1px solid
+}
+
+.profiletwo{
+  width: 165px;
+  height: auto;
+  border: 1px solid
+}
+.profilemain{
+  width: auto;
+  height: auto;
+  border: 1px solid pink;
+
+}
+
 
 .bear{
   padding: 20px 10px 10px 10px;

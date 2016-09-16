@@ -1,15 +1,22 @@
-<h1>players show</h1>
-<h1>{{playersShow.selected.name}}</h1>
-<!-- <h1>{{ playersShow.selected.spiritualanimal }}</h1>
- -->
-<img ng-src="{{ playersShow.selected.avatar }}" class="player-picture">
+<!-- <h1>players show</h1> -->
+<h3>Player's Stats</h3>
 
-<h2>Team: {{ playersShow.teams.name }}</h2>
+<div class="profilemain">
+  <div class="container profileone">
+    <h1>{{playersShow.selected.username}}</h1>
+    <h2>{{ playersShow.selected.spiritualanimal }}</h2>
+  </div>
+
+  <div class="container profiletwo">
+    <img ng-src="{{ playersShow.selected.avatar }}" class="player-picture">
+  </div>
+</div>
+<!-- <h2>Team: {{ playersShow.teams.name }}</h2> -->
 
 <h3>Player's Attribute Stats</h3>
 
-  {{ playersShow.chartData.dataset[0].data }}
-
+<!--   {{ playersShow.chartData.dataset[0].data }}
+ -->
   <fusioncharts ng-if="playersShow.chartData"
       type="radar"
       width="500"
@@ -18,44 +25,13 @@
       dataSource="{{ playersShow.chartData }}">
   </fusioncharts>
 
-  <p><a class="btn btn-default" ng-click="playersShow.updateMyChartData()">Click me to change data</a></p>
-
+<!--   <p><a class="btn btn-default" ng-click="playersShow.updateMyChartData()">Click me to change data</a></p>
+ -->
 
 <div class="twatshowbox"><a class="twitter-timeline" href="{{playersShow.selected.twitter }}">Tweets by AdrianaBllack</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
-<table class="table">
-  <thead class="thead-inverse">
-    <tr>
-      <th>Dodge</th>
-      <th>Dip</th>
-      <th>Dive</th>
-      <th>Duck</th>
-      <th>Hits</th>
-      <th>Catches</th>
-      <th>Rebounds</th>
-      <th>Speed</th>
-     
-    </tr>
-  </thead>
-    <!-- <tr ng-repeat="player in playersShow.selected"> -->
-      <td>{{ playersShow.selected.dodge }}</td>
-      <td>{{ playersShow.selected.dip }}</td>
-      <td>{{ playersShow.selected.dive }}</td>
-      <td>{{ playersShow.selected.duck }}</td>
-      <td>{{ playersShow.selected.hits }}</td>
-      <td>{{ playersShow.selected.catches }}</td>
-      <td>{{ playersShow.selected.rebounds }}</td>
-      <td>{{ playersShow.selected.speed }}</td>
-      <td></td>
-    </tr>
-        
-</table>
-
-
-
-
-
-<h3>{{playersShow.selected.twitter }}</h3>
+<!-- 
+<h3>{{playersShow.selected.twitter }}</h3> -->
 
 <button ui-sref="playersEdit({ id: playersShow.selected._id })">Edit</button>
 <button ng-click="playersShow.delete()">Delete</button>
