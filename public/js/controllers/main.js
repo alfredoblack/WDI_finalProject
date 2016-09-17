@@ -22,6 +22,7 @@ angular
 
       Player.get({ id: self.currentUser._id }, function(res) {
         console.log(res);
+        //
         if(!res.spiritualanimal){
           $state.go('socialEdit', {'id': self.currentUser._id });
         } else {

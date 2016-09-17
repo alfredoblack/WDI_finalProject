@@ -1,43 +1,43 @@
-<h1>Teams Show</h1>
-
-<h1>{{teamsShow.selected.name}}</h1>
+<!-- <h1>Teams Show</h1> -->
+<div class="container playball">
+<h1 class="honeforms">{{teamsShow.selected.name}}</h1>
 
 <img ng-src="{{teamsShow.selected.image }}" class="teamofficial">
 
 <h3>{{teamsShow.selected.team.name }}</h3>
 
-<h4>Team Roster</h4>
+<h2 class="honeforms">Team Roster</h2>
 
 
-
-<table class="table">
+ 
+<table class="table juice">
   <thead class="thead-inverse">
       <tr>
-        <th>Player</th>
-        <th>Player Name</th>
-        <th>Dodge</th>
-        <th>Dip</th>
-        <th>Dive</th>
-        <th>Duck</th>
-        <th>Hits</th>
-        <th>Catches</th>
-        <th>Rebounds</th>
-        <th>Speed</th>>
+        <th class="honeformsp">Player</th>
+        <th class="honeformsp">Player Name</th>
+        <th class="honeformsp">Dodge</th>
+        <th class="honeformsp">Dip</th>
+        <th class="honeformsp">Dive</th>
+        <th class="honeformsp">Duck</th>
+        <th class="honeformsp">Hits</th>
+        <th class="honeformsp">Catches</th>
+        <th class="honeformsp">Rebounds</th>
+        <th class="honeformsp">Speed</th>>
        
       </tr>
     </thead>
   
     <tr ng-repeat="player in teamsShow.selected.players">
       <td><img ng-src="{{ player.avatar }}" class="player-picture"></td>
-      <td>{{ player.username }}</td>
-      <td>{{ player.dodge }}</td>
-      <td>{{ player.dip }}</td>
-      <td>{{ player.dive }}</td>
-      <td>{{ player.duck }}</td>
-      <td>{{ player.hits }}</td>
-      <td>{{ player.catches }}</td>
-      <td>{{ player.rebounds }}</td>
-      <td>{{ player.speed }}</td>
+      <td class="homea">{{ player.username }}</td>
+      <td class="homea">{{ player.dodge }}</td>
+      <td class="homea">{{ player.dip }}</td>
+      <td class="homea">{{ player.dive }}</td>
+      <td class="homea">{{ player.duck }}</td>
+      <td class="homea">{{ player.hits }}</td>
+      <td class="homea">{{ player.catches }}</td>
+      <td class="homea">{{ player.rebounds }}</td>
+      <td class="homea">{{ player.speed }}</td>
     </tr>
     
 </table>
@@ -49,3 +49,5 @@
 <button ng-click="teamsShow.join()">Join</button>
 <button ui-sref="teamsEdit({ id: teamsShow.selected._id })">Edit</button>
 <button ng-click="teamsShow.delete()">Delete</button>
+
+</div>

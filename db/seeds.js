@@ -34,7 +34,7 @@ Player.create([{
   avatar: "./assets/jason.jpg",
   spiritualanimal: "Cat",
   github:"https://github.com/laij84",
-  twitter:"https://twitter.com/krtierney",
+  twitter:"https://twitter.com/LaiJase",
   quote:"get smashed ... mao mao",
   dodge: 16,
   dip: 17,
