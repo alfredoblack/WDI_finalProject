@@ -1,6 +1,6 @@
 angular
   .module('DodgeKitApp', ['ngResource', 'ui.router', 'satellizer', 'ng-fusioncharts'])
-  .constant("API_URL", "http://localhost:3000/api")
+  .constant("API_URL", "https://adridodgeball.herokuapp.com/api")
   .config(oAuthConfig)
   .config(Router);
  
